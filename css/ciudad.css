@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Rajdhani:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  background-color: #ffffff;
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.667;
+}
+.container h1 {
+  font-family: Rajdhani, sans-serif;
+}
+.container h2 {
+  font-family: Rajdhani, sans-serif;
+}
+.container h3 {
+  font-family: Rajdhani, sans-serif;
+}
+.container h4 {
+  font-family: Rajdhani, sans-serif;
+}
+.container h5 {
+  font-family: Rajdhani, sans-serif;
+}
+.container h6 {
+  font-family: Rajdhani, sans-serif;
+}
+.container h1 {
+  color: #6059f6;
+}
+.container h2 {
+  color: #000000;
+}
+.container h3 {
+  color: #000000;
+}
+.container .header {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.container .header img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 50px;
+  position: relative;
+  overflow: hidden;
+}
+.container .header a {
+  text-decoration: none;
+  margin-right: 3%;
+}
+.container .header a:link {
+  color: #000000;
+}
+.container .header a:visited {
+  color: inherit;
+}
+.container .header a:hover {
+  color: #6059f6;
+}
+.container .header a.active {
+  color: #6059f6;
+}
+.container .content {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.container .content p {
+  color: #888888;
+}
+.container .footer {
+  background-color: #04091e;
+  color: #888888;
+  height: 150px;
+}
+.container .anchor {
+  color: #6059f6;
+}
+
+/*# sourceMappingURL=ciudad.css.map */

@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  background-color: #ffffff;
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.667;
+
+  @for $i from 1 through 6 {
+    h#{$i} {
+      font-family: Rajdhani, sans-serif;
+    }
+  }
+
+  h1 {
+    color: #6059f6;
+  }
+
+  h2 {
+    color: #000000;
+  }
+
+  h3 {
+    color: #000000;
+  }
+
+  .header {
+    //text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 50px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      margin-right: 3%;
+
+      &:link {
+        color: #000000;
+      }
+
+      &:visited {
+        color: inherit;
+      }
+
+      &:hover {
+        color: #6059f6;
+      }
+
+      &.active {
+        color: #6059f6;
+      }
+    }
+  }
+
+  .content {
+    margin-left: 20%;
+    margin-right: 20%;
+
+    p {
+      color: #888888;
+    }
+  }
+
+  .footer {
+    background-color: #04091e;
+    color: #888888;
+    height: 150px;
+    //width: 100%;
+  }
+
+  .anchor {
+    color: #6059f6;
+  }
+}

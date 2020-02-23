@@ -1,0 +1,45 @@
+.container .content h1 {
+  margin: 0;
+}
+.container .content h2 {
+  margin: 0;
+}
+.container .content #div0 {
+  margin-top: 60px;
+  overflow: hidden;
+}
+.container .content #div0 #div1 {
+  width: 300px;
+  margin-right: 50px;
+  float: left;
+}
+.container .content #div0 #div2 {
+  overflow: hidden;
+}
+.container .content #div3 {
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 100px;
+}
+.container #div4 {
+  background-color: #efecff;
+  overflow: hidden;
+  margin-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.container #div4 #div5 {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 30%;
+  float: left;
+}
+.container #div4 #div6 {
+  overflow: hidden;
+  margin-left: 50%;
+  margin-right: 5%;
+  color: #888888;
+}
+
+/*# sourceMappingURL=inicio.css.map */

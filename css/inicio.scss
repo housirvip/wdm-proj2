@@ -1,0 +1,56 @@
+.container {
+
+  .content {
+    h1 {
+      margin: 0;
+    }
+
+    h2 {
+      margin: 0;
+    }
+
+    #div0 {
+      margin-top: 60px;
+      overflow: hidden;
+
+      #div1 {
+        width: 300px;
+        margin-right: 50px;
+        float: left;
+      }
+
+      #div2 {
+        overflow: hidden;
+      }
+    }
+
+    #div3 {
+      text-align: center;
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-top: 100px;
+    }
+  }
+
+  #div4 {
+    background-color: #efecff;
+    overflow: hidden;
+    margin-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    #div5 {
+      margin-left: 5%;
+      margin-right: 5%;
+      width: 30%;
+      float: left;
+    }
+
+    #div6 {
+      overflow: hidden;
+      margin-left: 50%;
+      margin-right: 5%;
+      color: #888888;
+    }
+  }
+}
