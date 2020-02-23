@@ -37,7 +37,8 @@
 }
 .container #div4 #div6 {
   overflow: hidden;
-  margin-left: 50%;
+  min-width: 400px;
+  margin-left: 45%;
   margin-right: 5%;
   color: #888888;
 }
