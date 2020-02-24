@@ -20,10 +20,12 @@ body {
   }
 
   h1 {
+    font-size: 50px;
     color: #6059f6;
   }
 
   h2 {
+    font-size: 40px;
     color: #000000;
   }
 
@@ -39,6 +41,8 @@ body {
     //text-align: center;
     margin-left: 10%;
     margin-right: 10%;
+    text-align: justify;
+    text-align-last: justify;
 
     img {
       display: inline-block;

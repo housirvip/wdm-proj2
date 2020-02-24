@@ -31,9 +31,11 @@ body {
   font-family: Rajdhani, sans-serif;
 }
 .container h1 {
+  font-size: 50px;
   color: #6059f6;
 }
 .container h2 {
+  font-size: 40px;
   color: #000000;
 }
 .container h3 {
@@ -45,6 +47,8 @@ body {
 .container .header {
   margin-left: 10%;
   margin-right: 10%;
+  text-align: justify;
+  text-align-last: justify;
 }
 .container .header img {
   display: inline-block;

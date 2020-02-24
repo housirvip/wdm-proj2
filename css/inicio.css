@@ -7,11 +7,10 @@
 .container .content #div0 {
   margin-top: 60px;
   overflow: hidden;
+  width: 100%;
 }
 .container .content #div0 #div1 {
-  width: 30%;
-  font-size: x-large;
-  font-weight: bolder;
+  width: 40%;
   margin-right: 10%;
   margin-left: 7%;
   float: left;
