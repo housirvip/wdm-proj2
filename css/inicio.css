@@ -9,17 +9,22 @@
   overflow: hidden;
 }
 .container .content #div0 #div1 {
-  width: 300px;
-  margin-right: 50px;
+  width: 30%;
+  font-size: x-large;
+  font-weight: bolder;
+  margin-right: 10%;
+  margin-left: 7%;
   float: left;
 }
 .container .content #div0 #div2 {
+  width: 40%;
   overflow: hidden;
 }
 .container .content #div3 {
+  width: 40%;
   text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 30%;
+  margin-right: 30%;
   margin-top: 100px;
 }
 .container #div4 {
@@ -37,10 +42,10 @@
 }
 .container #div4 #div6 {
   overflow: hidden;
-  min-width: 400px;
+  width: 35%;
   margin-left: 45%;
   margin-right: 5%;
-  color: #888888;
+  color: #777777;
 }
 
 /*# sourceMappingURL=inicio.css.map */

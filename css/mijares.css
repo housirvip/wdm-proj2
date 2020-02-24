@@ -40,8 +40,8 @@ body {
   color: #000000;
 }
 .container .header {
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .container .header img {
   display: inline-block;
@@ -55,7 +55,7 @@ body {
   margin-right: 3%;
 }
 .container .header a:link {
-  color: #000000;
+  color: #000033;
 }
 .container .header a:visited {
   color: inherit;
@@ -67,15 +67,15 @@ body {
   color: #6059f6;
 }
 .container .content {
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .container .content p {
-  color: #888888;
+  color: #777777;
 }
 .container .footer {
   background-color: #04091e;
-  color: #888888;
+  color: #777777;
   height: 150px;
 }
 .container .anchor {
