@@ -1,15 +1,18 @@
 .container .content #div0 {
     margin-top: 60px;
     overflow: hidden;
+    height: 500px;
 }
 .container .content #div1 {
-    width: 30%;
+    width: 35%;
     margin-right: 10%;
     float: left;
+    color: #777777;
 }
-.container .content #div2 {
-    width: 40%;
-    overflow: hidden;
+.container .content #img1 {
+    width: 35%;
+    height: 500px;
+    overflow: auto;
 }
 
 .container .content #div3 {
@@ -20,7 +23,7 @@
 
 .container .content #div4 {
     width: 30%;
-    margin-right: 10%;
+    margin-right: 15%;
     float: left;
     color: #777777;
     position: relative;
