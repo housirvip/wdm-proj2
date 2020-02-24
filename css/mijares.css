@@ -39,6 +39,9 @@ body {
 .container h3 {
   color: #000000;
 }
+.container h7 {
+  font-weight: bolder;
+}
 .container .header {
   margin-left: 10%;
   margin-right: 10%;

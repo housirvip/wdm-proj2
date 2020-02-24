@@ -1,0 +1,40 @@
+.container .content #div0 {
+    margin-top: 60px;
+    overflow: hidden;
+}
+.container .content #div1 {
+    width: 30%;
+    margin-right: 10%;
+    float: left;
+}
+.container .content #div2 {
+    overflow: hidden;
+}
+
+.container .content #div3 {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    overflow: hidden;
+}
+
+.container .content #div4 {
+    width: 30%;
+    margin-right: 10%;
+    float: left;
+    color: #777777;
+    position: relative;
+    top: 50%;
+    transform: translateY(+25%);
+}
+
+.container .content #div5 {
+    background-color: #f5f5ff;
+    width:40%;
+    overflow: hidden;
+    text-align: center;
+    color: #777777;
+}
+
+.container .content #div5 ol {
+    display:inline;
+}
