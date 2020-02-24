@@ -8,6 +8,7 @@
     float: left;
 }
 .container .content #div2 {
+    width: 40%;
     overflow: hidden;
 }
 
@@ -29,7 +30,7 @@
 
 .container .content #div5 {
     background-color: #f5f5ff;
-    width:40%;
+    width:45%;
     overflow: hidden;
     text-align: center;
     color: #777777;
