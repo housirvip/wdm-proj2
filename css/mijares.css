@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Rajdhani:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap");
 body {
   padding: 0;
@@ -32,22 +32,24 @@ body {
 }
 .container h1 {
   font-size: 50px;
-  font-weight: bold;
+  font-weight: 700;
   color: #6059f6;
 }
 .container h2 {
   font-size: 40px;
+  font-weight: 700;
   color: #000000;
 }
 .container h3 {
   color: #000000;
 }
 .container p1 {
-  font-weight: bolder;
+  font-weight: 900;
 }
 .container p2 {
   font-size: 20px;
   font-weight: 900;
+  color: #000000;
 }
 .container .header {
   margin-left: 10%;
@@ -63,6 +65,7 @@ body {
   overflow: hidden;
 }
 .container .header a {
+  font-weight: 900;
   text-decoration: none;
   margin-right: 3%;
 }
