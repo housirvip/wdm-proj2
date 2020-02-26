@@ -88,6 +88,15 @@ body {
 .container .content p {
   color: #777777;
 }
+.container .content .row {
+  display: flex;
+}
+.container .content .row .col-8 {
+  width: 33%;
+  margin-left: 15px;
+  margin-right: 15px;
+  float: left;
+}
 .container .footer {
   background-color: #04091e;
   color: #777777;

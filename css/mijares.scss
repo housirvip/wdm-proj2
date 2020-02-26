@@ -90,6 +90,17 @@ body {
     p {
       color: #777777;
     }
+
+    .row {
+      display: flex;
+
+      .col-8 {
+        width: 33%;
+        margin-left: 15px;
+        margin-right: 15px;
+        float: left;
+      }
+    }
   }
 
   .footer {

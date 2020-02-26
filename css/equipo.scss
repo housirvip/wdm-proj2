@@ -1,0 +1,33 @@
+.container {
+
+  .content {
+    margin-bottom: 80px;
+
+    #div {
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 80px;
+
+      h2 {
+        margin: 0;
+        font-size: 30px;
+      }
+    }
+
+    .row {
+      margin-top: 40px;
+      margin-left: 10%;
+      margin-right: 10%;
+
+      .col-8 {
+        text-align: center;
+        background-color: #f5f5ff;
+
+        p {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+}
