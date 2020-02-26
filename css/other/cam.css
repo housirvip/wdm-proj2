@@ -1,0 +1,46 @@
+.container .content #div0 {
+    margin-top: 60px;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.container .content #div0-1 {
+    width: 44%;
+    margin-right: 9%;
+    float: left;
+}
+.container .content #div0-2 {
+    width: 44%;
+    overflow: hidden;
+}
+.container .content #div1 {
+    margin-top: 60px;
+    text-align: center;
+    overflow: hidden;
+}
+.container .content #div1 #div1-img1 {
+    width: 5%;
+}
+.container .content #div1 #div1-1 {
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+}
+
+.container .content .row {
+    margin-top: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.container .content .row .col-8 {
+    text-align: center;
+    background-color: #f5f5ff;
+}
+.container .content .row .col-8 p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
