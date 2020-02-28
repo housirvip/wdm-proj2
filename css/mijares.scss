@@ -45,6 +45,10 @@ body {
     color: #000000;
   }
 
+  p3 {
+    color: #6059F6;
+  }
+
   .header {
     //text-align: center;
     margin-left: 10%;
@@ -112,9 +116,38 @@ body {
 
   .footer {
     background-color: #04091e;
-    color: #777777;
+    color: #878787;
     height: 150px;
     //width: 100%;
+
+    .row {
+      margin-top: 10px;
+      display: flex;
+
+      .col-12-left {
+        width: 50%;
+        text-align: left;
+        margin-left: 10%;
+        float: left;
+      }
+
+      .col-12-right {
+        width: 50%;
+        text-align: right;
+        margin-right: 10%;
+        float: left;
+      }
+    }
+
+    .line {
+      margin-top: 70px;
+      border: 0;
+      background-color: #333333;
+      height: 1px;
+      cursor: pointer;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
   }
 
   .anchor {
