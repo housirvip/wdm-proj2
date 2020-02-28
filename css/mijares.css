@@ -54,34 +54,37 @@ body {
 .container p3 {
   color: #6059F6;
 }
-.container .header {
+.container .nav {
+  background-color: #2f3742;
+}
+.container .nav .header {
   margin-left: 10%;
   margin-right: 10%;
   text-align: justify;
   text-align-last: justify;
 }
-.container .header img {
+.container .nav .header img {
   display: inline-block;
   vertical-align: middle;
   margin-right: 50px;
   position: relative;
   overflow: hidden;
 }
-.container .header a {
+.container .nav .header a {
   font-weight: 900;
   text-decoration: none;
   margin-right: 3%;
 }
-.container .header a:link {
+.container .nav .header a:link {
   color: #000033;
 }
-.container .header a:visited {
+.container .nav .header a:visited {
   color: inherit;
 }
-.container .header a:hover {
+.container .nav .header a:hover {
   color: #6059f6;
 }
-.container .header a.active {
+.container .nav .header a.active {
   color: #6059f6;
 }
 .container .content {

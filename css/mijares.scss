@@ -49,40 +49,44 @@ body {
     color: #6059F6;
   }
 
-  .header {
-    //text-align: center;
-    margin-left: 10%;
-    margin-right: 10%;
-    text-align: justify;
-    text-align-last: justify;
+  .nav {
+    background-color: #2f3742;
 
-    img {
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 50px;
-      position: relative;
-      overflow: hidden;
-    }
+    .header {
+      //text-align: center;
+      margin-left: 10%;
+      margin-right: 10%;
+      text-align: justify;
+      text-align-last: justify;
 
-    a {
-      font-weight: 900;
-      text-decoration: none;
-      margin-right: 3%;
-
-      &:link {
-        color: #000033;
+      img {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 50px;
+        position: relative;
+        overflow: hidden;
       }
 
-      &:visited {
-        color: inherit;
-      }
+      a {
+        font-weight: 900;
+        text-decoration: none;
+        margin-right: 3%;
 
-      &:hover {
-        color: #6059f6;
-      }
+        &:link {
+          color: #000033;
+        }
 
-      &.active {
-        color: #6059f6;
+        &:visited {
+          color: inherit;
+        }
+
+        &:hover {
+          color: #6059f6;
+        }
+
+        &.active {
+          color: #6059f6;
+        }
       }
     }
   }
