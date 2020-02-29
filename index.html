@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/mijares.css">
-    <link rel="stylesheet" type="text/css" href="css/inicio.css">
+    <link rel="stylesheet" type="text/css" href="css/other/inicio.css">
     <title>Inicio</title>
 </head>
 <body>
@@ -18,8 +18,8 @@
             <a href="eventos.html">Eventos</a>
             <a href="videos.html">Videos</a>
             <a href="equipo.html">Equipo</a>
-            <a href="ids.html">Inicio De Sesion</a>
-            <a href="registro.html">Registro</a>
+            <a onclick="openLoginForm()">Inicio De Sesion</a>
+            <a onclick="openSignupForm()">Registro</a>
         </div>
     </div>
     <div class="content" id="wrapper">
@@ -93,10 +93,77 @@
                 Copyright ©2020 All rights reserved | This template is made with <p3>❤</p3> by <p3>DiazApps</p3>
             </div>
             <div class="col-12-right">
-                <img src="images/icons.png" alt=""/>
+                <img src="images/footerIcons.png" alt=""/>
             </div>
         </div>
     </div>
+
+<!--    <div class="form-popup" id="loginWindow">-->
+<!--        <div class="closeButton">-->
+<!--            <img src="images/closeButton.png" onclick="closeLoginForm()"/>-->
+<!--        </div>-->
+<!--        <div class="container">-->
+<!--            <div class="content">-->
+<!--                <div id="loginDiv">-->
+<!--                    <img src="images/logo.png" alt=""/>-->
+<!--                    <h2>CENTRO AUGUSTO MIJARES</h2>-->
+<!--                </div>-->
+<!--                <form id="loginForm">-->
+<!--                    <div>-->
+<!--                        <h3>Iniciar Sesion</h3>-->
+<!--                        <label for="loginUsername"></label><input type="text" id="loginUsername" placeholder="Numbre de Usuario o Correo"/>-->
+<!--                        <label for="loginPassword"></label><input type="password" id="loginPassword" placeholder="Contraseña"/>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <button type="submit">Entrar</button>-->
+<!--                    </div>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="form-popup" id="signupWindow">-->
+<!--        <div class="closeButton">-->
+<!--            <img src="images/closeButton.png" onclick="closeSignupForm()"/>-->
+<!--        </div>-->
+<!--        <div class="container">-->
+<!--            <div class="content">-->
+<!--                <div id="signupDiv">-->
+<!--                    <img src="images/logo.png" alt=""/>-->
+<!--                    <h3>Registro</h3>-->
+<!--                </div>-->
+<!--                <div class="row">-->
+<!--                    <div id="signupDiv1">-->
+<!--                        <form id="signupForm">-->
+<!--                            <div class="row">-->
+<!--                                <label for="signupUsername"></label><input type="text" id="signupUsername" placeholder="Numbre"/>-->
+<!--                                <label for="correo"></label><input type="text" id="correo" placeholder="Correo"/>-->
+<!--                            </div>-->
+<!--                            <div class="row">-->
+<!--                                <label for="signupPassword"></label><input type="password" id="signupPassword" placeholder="Contraseña"/>-->
+<!--                                <label for="signupPassword2"></label><input type="password" id="signupPassword2" placeholder="Repeater Contraseña"/>-->
+<!--                            </div>-->
+<!--                            <div class="row">-->
+<!--                                <label for="direction"></label><input type="text" id="direction" placeholder="Direccion"/>-->
+<!--                            </div>-->
+<!--                            <div>-->
+<!--                                <button type="submit">Guardar</button>-->
+<!--                            </div>-->
+<!--                        </form>-->
+<!--                    </div>-->
+<!--                    <div id="signupDiv2">-->
+<!--                        <img src="images/logo.png" alt=""/>-->
+<!--                        <h2>CENTRO AUGUSTO MIJARES</h2>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <div id="loginPage"></div>
+    <script type="text/javascript" src="js/login.js"></script>
+    <div id="signupPage"></div>
+    <script type="text/javascript" src="js/signup.js"></script>
 </div>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/mijares.css">
-    <link rel="stylesheet" type="text/css" href="css/semblanza.css">
+    <link rel="stylesheet" type="text/css" href="css/other/semblanza.css">
     <title>Semblance</title>
 </head>
 <body>
@@ -18,8 +18,8 @@
             <a href="eventos.html">Eventos</a>
             <a href="videos.html">Videos</a>
             <a href="equipo.html">Equipo</a>
-            <a href="ids.html">Inicio De Sesion</a>
-            <a href="registro.html">Registro</a>
+            <a onclick="openLoginForm()">Inicio De Sesion</a>
+            <a onclick="openSignupForm()">Registro</a>
         </div>
     </div>
     <div class="content">
@@ -85,10 +85,14 @@
                 Copyright ©2020 All rights reserved | This template is made with <p3>❤</p3> by <p3>DiazApps</p3>
             </div>
             <div class="col-12-right">
-                <img src="images/icons.png" alt=""/>
+                <img src="images/footerIcons.png" alt=""/>
             </div>
         </div>
     </div>
+    <div id="loginPage"></div>
+    <script type="text/javascript" src="js/login.js"></script>
+    <div id="signupPage"></div>
+    <script type="text/javascript" src="js/signup.js"></script>
 </div>
 </body>
 </html>

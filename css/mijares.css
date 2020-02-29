@@ -111,9 +111,9 @@ body {
   float: left;
 }
 .container .footer {
+  height: 200px;
   background-color: #04091e;
   color: #878787;
-  height: 150px;
 }
 .container .footer .row {
   margin-top: 10px;
@@ -134,7 +134,7 @@ body {
   float: left;
 }
 .container .footer .line {
-  margin-top: 70px;
+  margin-top: 100px;
   border: 0;
   background-color: #333333;
   height: 1px;
@@ -144,6 +144,101 @@ body {
 }
 .container .anchor {
   color: #6059f6;
+}
+.container .form-popup {
+  display: none;
+  position: fixed;
+  top: 10%;
+  bottom: 10%;
+  left: 20%;
+  right: 20%;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  width: 60%;
+  padding: 10px;
+  background-color: white;
+}
+.container .form-popup p {
+  color: #777777;
+}
+.container .form-popup .closeButton {
+  top: 10px;
+  right: 10px;
+  float: right;
+}
+.container #loginDiv {
+  margin-top: 40px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+.container #loginDiv h2 {
+  margin: 0;
+}
+.container #loginForm {
+  text-align: center;
+}
+.container #loginForm input {
+  padding: 12px 20px;
+  margin: 8px 8px;
+  border: 1px solid #bcb4ff;
+  border-radius: 4px;
+  width: 300px;
+}
+.container #loginForm button {
+  margin-top: 30px;
+  background-color: #6059f6;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.container #signupDiv {
+  margin-top: 40px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+.container #signupDiv h2 {
+  margin: 0;
+}
+.container #signupDiv1 {
+  text-align: left;
+  width: 55%;
+}
+.container #signupDiv1 h3 {
+  margin: 0;
+}
+.container #signupDiv2 {
+  margin-left: 10%;
+}
+.container #signupDiv2 h2 {
+  margin: 0;
+}
+.container #signupForm input {
+  padding: 12px 20px;
+  margin: 20px 12px;
+  border: 1px solid #bcb4ff;
+  border-radius: 4px;
+  width: 50%;
+}
+.container #signupForm button {
+  margin-top: 30px;
+  margin-left: 8px;
+  background-color: #6059f6;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.container #signupForm #direction {
+  width: 100%;
 }
 
 /*# sourceMappingURL=mijares.css.map */
