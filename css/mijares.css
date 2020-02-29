@@ -161,14 +161,14 @@ body {
   width: 60%;
   padding: 10px;
   background-color: white;
+  overflow-y: scroll;
 }
 .container .form-popup p {
   color: #777777;
 }
 .container .form-popup .closeButton {
-  top: 10px;
-  right: 10px;
-  float: right;
+  position: fixed;
+  right: 21%;
 }
 .container #loginDiv {
   margin-top: 40px;
