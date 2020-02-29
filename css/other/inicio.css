@@ -34,16 +34,14 @@
   padding-bottom: 50px;
 }
 .container #div4 #div5 {
-  margin-left: 5%;
-  margin-right: 5%;
-  width: 30%;
+  margin-left: 7%;
+  margin-right: 10%;
+  width: 40%;
   float: left;
 }
 .container #div4 #div6 {
   overflow: hidden;
-  width: 35%;
-  margin-left: 45%;
-  margin-right: 5%;
+  width: 40%;
   color: #777777;
 }
 
