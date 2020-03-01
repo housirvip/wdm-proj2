@@ -191,7 +191,7 @@ body {
   background-color: #ddd;
 }
 .container .footer {
-  height: 200px;
+  height: 150px;
   background-color: #04091e;
   color: #878787;
 }
@@ -218,7 +218,7 @@ body {
   margin-left: 40px;
 }
 .container .footer .line {
-  margin-top: 140px;
+  margin-top: 90px;
   margin-bottom: 10px;
   border: 0;
   background-color: #333333;
