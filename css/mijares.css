@@ -336,13 +336,13 @@ body {
 }
 .container .dashboardForm input {
   padding: 12px 20px;
-  margin: 8px 8px;
+  margin: 4px 8px;
   border: 1px solid #bcb4ff;
   border-radius: 4px;
   width: 300px;
 }
 .container .dashboardForm button, .container .dashboardForm a {
-  margin-top: 30px;
+  margin-top: 20px;
   background-color: #6059f6;
   border: none;
   border-radius: 5px;
