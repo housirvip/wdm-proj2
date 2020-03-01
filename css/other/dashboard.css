@@ -1,0 +1,76 @@
+.container .content .row .vertical-menu {
+  margin-top: 40px;
+  margin-bottom: 80px;
+  width: 200px;
+}
+.container .content .row .vertical-menu a {
+  background-color: #eee;
+  /* Grey background color */
+  color: black;
+  /* Black text color */
+  display: block;
+  /* Make the links appear below each other */
+  padding: 12px;
+  /* Add some padding */
+  text-decoration: none;
+  /* Remove underline from links */
+}
+.container .content .row .vertical-menu a:hover {
+  background-color: #ccc;
+  /* Dark grey background on mouse-over */
+}
+.container .content .row .vertical-menu a.active {
+  background-color: #6059f6;
+  /* Add a green color to the "active/current" link */
+  color: white;
+}
+.container .content .row #table-wrapper {
+  margin-left: 10%;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+.container .content .row #table-wrapper table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.container .content .row #table-wrapper table td, .container .content .row #table-wrapper table tr {
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+}
+.container .content .row #table-wrapper table tr:hover {
+  background-color: #f5f5f5;
+}
+.container .content .row #table-wrapper table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 8px;
+  text-align: left;
+  background-color: #f5f5f5;
+  color: black;
+}
+.container .content .row #table-wrapper .pagination {
+  margin-top: 30px;
+  display: inline-block;
+}
+.container .content .row #table-wrapper .pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.container .content .row #table-wrapper .pagination a.active {
+  background-color: #6059f6;
+  color: white;
+}
+.container .content .row #table-wrapper .pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+.container .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/*# sourceMappingURL=dashboard.css.map */

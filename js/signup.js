@@ -27,7 +27,7 @@ function createSignUpHtml() {
         "                                <label for=\"direction\"></label><input type=\"text\" id=\"direction\" placeholder=\"Direccion\"/>\n" +
         "                            </div>\n" +
         "                            <div>\n" +
-        "                                <button type=\"submit\">Guardar</button>\n" +
+        "                                <a href=\"dashboard.html\">Guardar</a>\n" +
         "                            </div>\n" +
         "                        </form>\n" +
         "                    </div>\n" +

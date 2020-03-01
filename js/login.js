@@ -1,4 +1,3 @@
-
 window.onload = createLoginHtml();
 
 function createLoginHtml() {
@@ -20,7 +19,7 @@ function createLoginHtml() {
         "                        <label for=\"loginPassword\"></label><input type=\"password\" id=\"loginPassword\" placeholder=\"Contraseña\"/>\n" +
         "                    </div>\n" +
         "                    <div>\n" +
-        "                        <button type=\"submit\">Entrar</button>\n" +
+        "                        <a href=\"dashboard.html\">Entrar</a>\n" +
         "                    </div>\n" +
         "                </form>\n" +
         "            </div>\n" +
@@ -39,6 +38,10 @@ function openLoginForm() {
 
 function closeLoginForm() {
     document.getElementById("loginWindow").style.display = "none";
+}
+
+function loginas() {
+    console.log("login")
 }
 
 
