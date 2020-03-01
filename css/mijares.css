@@ -42,6 +42,7 @@ body {
   color: #000000;
 }
 .container h3 {
+  font-size: 20px;
   color: #000000;
 }
 .container p1 {
@@ -91,11 +92,11 @@ body {
 .container .content, .container #wrapper {
   margin-left: 10%;
   margin-right: 10%;
-}
-.container .content p, .container #wrapper p {
   color: #777777;
 }
 .container .content .row, .container #wrapper .row {
+  margin-top: 40px;
+  text-align: center;
   display: flex;
 }
 .container .content .row .col-8, .container #wrapper .row .col-8 {
@@ -103,12 +104,91 @@ body {
   margin-left: 15px;
   margin-right: 15px;
   float: left;
+  background-color: #f5f5ff;
+  padding-left: 2%;
+  padding-right: 2%;
 }
-.container .content .row .col-12, .container #wrapper .row .col-12 {
+.container .content .row .col-12-left, .container #wrapper .row .col-12-left {
   width: 50%;
-  margin-left: 15px;
-  margin-right: 15px;
   float: left;
+  margin-right: 30px;
+}
+.container .content .row .col-12-right, .container #wrapper .row .col-12-right {
+  width: 50%;
+  float: left;
+  margin-left: 30px;
+}
+.container .content .row .white, .container #wrapper .row .white {
+  background-color: white;
+}
+.container .content .row .vertical-menu, .container #wrapper .row .vertical-menu {
+  margin-top: 40px;
+  margin-bottom: 80px;
+  width: 200px;
+}
+.container .content .row .vertical-menu a, .container #wrapper .row .vertical-menu a {
+  background-color: #eee;
+  /* Grey background color */
+  color: black;
+  /* Black text color */
+  display: block;
+  /* Make the links appear below each other */
+  padding: 12px;
+  /* Add some padding */
+  text-decoration: none;
+  /* Remove underline from links */
+}
+.container .content .row .vertical-menu a:hover, .container #wrapper .row .vertical-menu a:hover {
+  background-color: #ccc;
+  /* Dark grey background on mouse-over */
+}
+.container .content .row .vertical-menu a.active, .container #wrapper .row .vertical-menu a.active {
+  background-color: #6059f6;
+  /* Add a green color to the "active/current" link */
+  color: white;
+}
+.container .content .row #table-wrapper, .container #wrapper .row #table-wrapper {
+  margin-left: 10%;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+.container .content .row #table-wrapper table, .container #wrapper .row #table-wrapper table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.container .content .row #table-wrapper table td, .container .content .row #table-wrapper table tr, .container #wrapper .row #table-wrapper table td, .container #wrapper .row #table-wrapper table tr {
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+}
+.container .content .row #table-wrapper table tr:hover, .container #wrapper .row #table-wrapper table tr:hover {
+  background-color: #f5f5f5;
+}
+.container .content .row #table-wrapper table th, .container #wrapper .row #table-wrapper table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 8px;
+  text-align: left;
+  background-color: #f5f5f5;
+  color: black;
+}
+.container .content .row #table-wrapper .pagination, .container #wrapper .row #table-wrapper .pagination {
+  margin-top: 30px;
+  display: inline-block;
+}
+.container .content .row #table-wrapper .pagination a, .container #wrapper .row #table-wrapper .pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.container .content .row #table-wrapper .pagination a.active, .container #wrapper .row #table-wrapper .pagination a.active {
+  background-color: #6059f6;
+  color: white;
+}
+.container .content .row #table-wrapper .pagination a:hover:not(.active), .container #wrapper .row #table-wrapper .pagination a:hover:not(.active) {
+  background-color: #ddd;
 }
 .container .footer {
   height: 200px;
@@ -116,7 +196,7 @@ body {
   color: #878787;
 }
 .container .footer .row {
-  margin-top: 10px;
+  margin-top: 30px;
   display: flex;
 }
 .container .footer .row .col-12-left {
@@ -171,14 +251,6 @@ body {
   position: fixed;
   right: 21%;
 }
-.container #loginDiv {
-  margin-top: 40px;
-  margin-bottom: 80px;
-  text-align: center;
-}
-.container #loginDiv h2 {
-  margin: 0;
-}
 .container #loginForm {
   text-align: center;
 }
@@ -200,27 +272,6 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-}
-.container #signupDiv {
-  margin-top: 10px;
-  margin-bottom: 80px;
-  text-align: center;
-}
-.container #signupDiv h2 {
-  margin: 0;
-}
-.container #signupDiv1 {
-  text-align: left;
-  width: 55%;
-}
-.container #signupDiv1 h3 {
-  margin: 0;
-}
-.container #signupDiv2 {
-  margin-left: 10%;
-}
-.container #signupDiv2 h2 {
-  margin: 0;
 }
 .container #signupForm input {
   padding: 12px 20px;
@@ -244,6 +295,32 @@ body {
 }
 .container #signupForm #direction {
   width: 100%;
+}
+.container .oneElementCenter {
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 40px;
+}
+.container .contentBackground {
+  background-color: #f5f5ff;
+  overflow: hidden;
+  margin-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.container #leerMars button {
+  margin-top: 30px;
+  margin-left: 30px;
+  background-color: #6059f6;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=mijares.css.map */

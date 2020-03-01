@@ -8,12 +8,12 @@ function createSignUpHtml() {
         "        </div>\n" +
         "        <div class=\"container\">\n" +
         "            <div class=\"content\">\n" +
-        "                <div id=\"signupDiv\">\n" +
-        "                    <img src=\"images/logo.png\" alt=\"\"/>\n" +
+        "                <div class=\"oneElementCenter\">\n" +
+        "                    <img src=\"images/logo.png\" alt=\"\" style=\"width: 80px; height: 80px\"/>\n" +
         "                    <h3>Registro</h3>\n" +
         "                </div>\n" +
         "                <div class=\"row\">\n" +
-        "                    <div id=\"signupDiv1\">\n" +
+        "                    <div class=\"col-12-left\">\n" +
         "                        <form id=\"signupForm\">\n" +
         "                            <div class=\"row\">\n" +
         "                                <label for=\"signupUsername\"></label><input type=\"text\" id=\"signupUsername\" placeholder=\"Numbre\"/>\n" +
@@ -31,7 +31,7 @@ function createSignUpHtml() {
         "                            </div>\n" +
         "                        </form>\n" +
         "                    </div>\n" +
-        "                    <div id=\"signupDiv2\">\n" +
+        "                    <div class=\"col-12-right\">\n" +
         "                        <img src=\"images/logo.png\" alt=\"\"/>\n" +
         "                        <h2>CENTRO AUGUSTO MIJARES</h2>\n" +
         "                    </div>\n" +

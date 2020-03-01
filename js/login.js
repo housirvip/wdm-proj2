@@ -8,7 +8,7 @@ function createLoginHtml() {
         "        </div>\n" +
         "        <div class=\"container\">\n" +
         "            <div class=\"content\">\n" +
-        "                <div id=\"loginDiv\">\n" +
+        "                <div class=\"oneElementCenter\">\n" +
         "                    <img src=\"images/logo.png\" alt=\"\"/>\n" +
         "                    <h2>CENTRO AUGUSTO MIJARES</h2>\n" +
         "                </div>\n" +
