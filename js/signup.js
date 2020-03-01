@@ -27,7 +27,7 @@ function createSignUpHtml() {
         "                                <label for=\"direction\"></label><input type=\"text\" id=\"direction\" placeholder=\"Direccion\"/>\n" +
         "                            </div>\n" +
         "                            <div>\n" +
-        "                                <a href=\"dashboard.html\">Guardar</a>\n" +
+        "                                <a href=\"dashboard.html\" onclick=\"signup()\">Guardar</a>\n" +
         "                            </div>\n" +
         "                        </form>\n" +
         "                    </div>\n" +
@@ -51,4 +51,8 @@ function openSignupForm() {
 
 function closeSignupForm() {
     document.getElementById("signupWindow").style.display = "none";
+}
+
+function signup() {
+    localStorage.setItem("uid", "1");
 }

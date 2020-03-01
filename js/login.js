@@ -44,4 +44,9 @@ function login() {
     localStorage.setItem("uid", "1");
 }
 
+function signOut() {
+    localStorage.removeItem("uid");
+    location.reload();
+}
+
 
