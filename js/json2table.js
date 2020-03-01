@@ -15,6 +15,22 @@ function buildHtmlTable(arr) {
             td.appendChild(document.createTextNode(arr[i][columns[j]] || ''));
             tr.appendChild(td);
         }
+        const operationDiv = document.createElement("div");
+        operationDiv.className = "operation";
+
+        const editButton = document.createElement("button");
+        editButton.className = "editButton";
+        const editButtonText = document.createTextNode("Edit");
+        editButton.appendChild(editButtonText);
+        operationDiv.appendChild(editButton);
+
+        const deleteButton = document.createElement("button");
+        deleteButton.className = "deleteButton";
+        const deleteButtonText = document.createTextNode("Delete");
+        deleteButton.appendChild(deleteButtonText);
+        operationDiv.appendChild(deleteButton);
+
+        tr.appendChild(operationDiv);
         table.appendChild(tr);
     }
     return table;
@@ -36,6 +52,9 @@ function addAllColumnHeaders(arr, table) {
             }
         }
     }
+    const th_operation = _th_.cloneNode(false);
+    th_operation.appendChild(document.createTextNode("Operation"));
+    tr.appendChild(th_operation);
     table.appendChild(tr);
     return columnSet;
 }

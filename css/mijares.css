@@ -153,6 +153,22 @@ body {
   margin-bottom: 50px;
   width: 100%;
 }
+.container .content .row #table-wrapper button, .container #wrapper .row #table-wrapper button {
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.container .content .row #table-wrapper .addButton, .container #wrapper .row #table-wrapper .addButton {
+  background-color: cornflowerblue;
+}
 .container .content .row #table-wrapper table, .container #wrapper .row #table-wrapper table {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -172,6 +188,12 @@ body {
   text-align: left;
   background-color: #f5f5f5;
   color: black;
+}
+.container .content .row #table-wrapper table .operation .editButton, .container #wrapper .row #table-wrapper table .operation .editButton {
+  background-color: blueviolet;
+}
+.container .content .row #table-wrapper table .operation .deleteButton, .container #wrapper .row #table-wrapper table .operation .deleteButton {
+  background-color: red;
 }
 .container .content .row #table-wrapper .pagination, .container #wrapper .row #table-wrapper .pagination {
   margin-top: 30px;
