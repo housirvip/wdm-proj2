@@ -31,10 +31,10 @@
                 <a id="contact" href="#" onclick="changeTab('contact')" class="active">Contacts</a>
                 <a id="event" href="#" onclick="changeTab('event')">Events</a>
                 <a id="project" href="#" onclick="changeTab('project')">Projects</a>
-                <a id="message" href="#" onclick="changeTab('message')">Messages</a>
+<!--                <a id="message" href="#" onclick="changeTab('message')">Messages</a>-->
             </div>
             <div id="table-wrapper">
-                <button class="addButton">+ Add</button>
+                <button class="addButton" onclick="openAddForm()">+ Add</button>
                 <div id="table"></div>
                 <div class="pagination">
                     <a href="#">&laquo;</a>
@@ -69,69 +69,335 @@
             </div>
         </div>
     </div>
+
+    <div class="form-popup" id="addContact">
+        <div class="closeButton">
+            <img src="images/closeButton.png" onclick="closeAddForm()"/>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div class="oneElementCenter">
+                    <img src="images/logo.png" alt=""/>
+                    <h3>Add new contact information</h3>
+                </div>
+                <form class="dashboardForm">
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="user">user:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="user"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="company">company:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="company"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="country">country:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="country"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="phone">phone:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="phone"/>
+                        </div>
+                    </div>
+                    <div>
+                        <button onclick="closeAddForm()" type="submit">Entrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="form-popup" id="addEvent">
+        <div class="closeButton">
+            <img src="images/closeButton.png" onclick="closeAddForm()"/>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div class="oneElementCenter">
+                    <img src="images/logo.png" alt=""/>
+                    <h3>Add new event information</h3>
+                </div>
+                <form class="dashboardForm">
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="eventTitle">title:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="eventTitle"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="eventDate">date:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="eventDate"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="eventContent">content:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="eventContent"/>
+                        </div>
+                    </div>
+                    <div>
+                        <button onclick="closeAddForm()" type="submit">Entrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="form-popup" id="addProject">
+        <div class="closeButton">
+            <img src="images/closeButton.png" onclick="closeAddForm()"/>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div class="oneElementCenter">
+                    <img src="images/logo.png" alt=""/>
+                    <h3>Add new project information</h3>
+                </div>
+                <form class="dashboardForm">
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="projectTitle">title:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="projectTitle"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="projectDate">date:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="projectDate"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="projectContent">content:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="projectContent"/>
+                        </div>
+                    </div>
+                    <div>
+                        <button onclick="closeAddForm()" type="submit">Entrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-popup" id="editContact">
+        <div class="closeButton">
+            <img src="images/closeButton.png" onclick="closeEditForm()"/>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div class="oneElementCenter">
+                    <img src="images/logo.png" alt=""/>
+                    <h3>Edit a contact information</h3>
+                </div>
+                <form class="dashboardForm">
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="userEdit">user:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="userEdit" value="Tom"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="companyEdit">company:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="companyEdit" value="Alfreds Futterkiste"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="countryEdit">country:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="countryEdit" value="Germany"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="phoneEdit">phone:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="phoneEdit" value="(682)123-1234"/>
+                        </div>
+                    </div>
+                    <div>
+                        <button onclick="closeEditForm()" type="submit">Entrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="form-popup" id="editEvent">
+        <div class="closeButton">
+            <img src="images/closeButton.png" onclick="closeEditForm()"/>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div class="oneElementCenter">
+                    <img src="images/logo.png" alt=""/>
+                    <h3>Edit a event information</h3>
+                </div>
+                <form class="dashboardForm">
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="eventTitleEdit">title:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="eventTitleEdit" value="Apple IPhone 11 Pro Max 50% discount"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="eventDateEdit">date:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="eventDateEdit" value="2020-01-28 05:54:37"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="eventContentEdit">content:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="eventContentEdit"/>
+                        </div>
+                    </div>
+                    <div>
+                        <button onclick="closeEditForm()" type="submit">Entrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="form-popup" id="editProject">
+        <div class="closeButton">
+            <img src="images/closeButton.png" onclick="closeEditForm()"/>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div class="oneElementCenter">
+                    <img src="images/logo.png" alt=""/>
+                    <h3>Edit a project information</h3>
+                </div>
+                <form class="dashboardForm">
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="projectTitleEdit">title:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="projectTitleEdit" value="Bootstrap version 5 has released"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="projectDateEdit">date:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="projectDateEdit" value="2020-01-28 05:54:37"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="projectContentEdit">content:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="projectContentEdit"/>
+                        </div>
+                    </div>
+                    <div>
+                        <button onclick="closeEditForm()" type="submit">Entrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-popup" id="deleteContact" style="top: 30%; bottom: 30%; overflow-y: hidden">
+        <div class="closeButton">
+            <img src="images/closeButton.png" onclick="closeDeleteForm()"/>
+        </div>
+        <div class="oneElementCenter">
+            <h2>Do you want to delete this contact?</h2>
+        </div>
+        <form class="dashboardForm">
+            <div class="row" style="text-align: center">
+                <div class="col-12">
+                    <button class="deleteButton" onclick="closeDeleteForm()">Delete</button>
+                </div>
+                <div class="col-12">
+                    <button class="cancelButton" onclick="closeDeleteForm()">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-popup" id="deleteEvent" style="top: 30%; bottom: 30%; overflow-y: hidden">
+        <div class="closeButton">
+            <img src="images/closeButton.png" onclick="closeDeleteForm()"/>
+        </div>
+        <div class="oneElementCenter">
+            <h2>Do you want to delete this event?</h2>
+        </div>
+        <form class="dashboardForm">
+            <div class="row" style="text-align: center">
+                <div class="col-12">
+                    <button class="deleteButton" onclick="closeDeleteForm()">Delete</button>
+                </div>
+                <div class="col-12">
+                    <button class="cancelButton" onclick="closeDeleteForm()">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-popup" id="deleteProject" style="top: 30%; bottom: 30%; overflow-y: hidden">
+        <div class="closeButton">
+            <img src="images/closeButton.png" onclick="closeDeleteForm()"/>
+        </div>
+        <div class="oneElementCenter">
+            <h2>Do you want to delete this project?</h2>
+        </div>
+        <form class="dashboardForm">
+            <div class="row" style="text-align: center">
+                <div class="col-12">
+                    <button class="deleteButton" onclick="closeDeleteForm()">Delete</button>
+                </div>
+                <div class="col-12">
+                    <button class="cancelButton" onclick="closeDeleteForm()">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
 </div>
-<script type="text/javascript" src="js/json2table.js"></script>
+<script type="text/javascript" src="js/dashboard.js"></script>
 <script type="text/javascript" src="js/login.js"></script>
-<script type="text/javascript">
-    const contact = [
-        {"ID": 1, "User": "Bob", "Company": "Alfreds Futterkiste", "Country": "Germany", "Phone": "(682)123-1234"},
-        {"ID": 2, "User": "Tom", "Company": "Alfreds Futterkiste", "Country": "Germany", "Phone": "(682)123-1234"},
-        {"ID": 3, "User": "Chris", "Company": "Alfreds Futterkiste", "Country": "Germany", "Phone": "(682)123-1234"},
-        {"ID": 4, "User": "Betty", "Company": "Alfreds Futterkiste", "Country": "Germany", "Phone": "(682)123-1234"},
-    ];
-    const events = [
-        {"ID": 1, "Title": "Apple IPhone 11 Pro Max 50% discount", "Date": "2020-01-28 05:54:37"},
-        {"ID": 2, "Title": "Apple IPhone 12 Pro Max 60% discount", "Date": "2020-01-28 05:54:37"},
-        {"ID": 3, "Title": "Apple IPhone 13 Pro Max 70% discount", "Date": "2020-01-28 05:54:37"},
-        {"ID": 4, "Title": "Apple IPhone 14 Pro Max 80% discount", "Date": "2020-01-28 05:54:37"},
-    ];
-    const projects = [
-        {"ID": 1, "Title": "Bootstrap version 5 has released", "Date": "2020-01-28 05:54:37"},
-        {"ID": 2, "Title": "Bootstrap version 6 has released", "Date": "2020-01-28 05:54:37"},
-        {"ID": 3, "Title": "Bootstrap version 7 has released", "Date": "2020-01-28 05:54:37"},
-        {"ID": 4, "Title": "Bootstrap version 8 has released", "Date": "2020-01-28 05:54:37"},
-    ];
-    const messages = [
-        {"ID": 1, "Title": "Betty send you a private message", "Date": "2020-01-28 05:54:37"},
-        {"ID": 1, "Title": "Tom send you a private message", "Date": "2020-01-28 05:54:37"},
-        {"ID": 1, "Title": "Chris send you a private message", "Date": "2020-01-28 05:54:37"},
-        {"ID": 1, "Title": "Bob send you a private message", "Date": "2020-01-28 05:54:37"},
-    ];
-
-    let lastTab = "contact";
-
-    function changeTab(key) {
-        if (lastTab) {
-            document.getElementById(lastTab).classList.remove("active");
-        }
-        lastTab = key;
-        console.log(key);
-        document.getElementById(lastTab).classList.add("active");
-        renderTable(key)
-    }
-
-    function renderTable(key) {
-        const tableDiv = document.getElementById("table");
-        tableDiv.innerHTML = "";
-        switch (key) {
-            case "contact":
-                tableDiv.appendChild(buildHtmlTable(contact));
-                break;
-            case "event":
-                tableDiv.appendChild(buildHtmlTable(events));
-                break;
-            case "project":
-                tableDiv.appendChild(buildHtmlTable(projects));
-                break;
-            case "message":
-                tableDiv.appendChild(buildHtmlTable(messages));
-                break;
-            default:
-                tableDiv.appendChild(buildHtmlTable(contact));
-        }
-    }
-
-    window.onload = renderTable;
-</script>
 </body>
 </html>
