@@ -96,10 +96,10 @@ body {
 }
 .container .content .row, .container #wrapper .row {
   margin-top: 40px;
-  text-align: center;
   display: flex;
 }
 .container .content .row .col-8, .container #wrapper .row .col-8 {
+  text-align: center;
   width: 33%;
   margin-left: 15px;
   margin-right: 15px;
@@ -196,7 +196,6 @@ body {
   color: #878787;
 }
 .container .footer .row {
-  margin-top: 30px;
   display: flex;
 }
 .container .footer .row .col-12-left {
@@ -220,6 +219,7 @@ body {
 }
 .container .footer .line {
   margin-top: 100px;
+  margin-bottom: 10px;
   border: 0;
   background-color: #333333;
   height: 1px;
