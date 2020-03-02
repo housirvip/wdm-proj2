@@ -12,7 +12,7 @@ You can type anything in username and password to login.
 
 ## 3. After login pages
 (1) When you login, you will go to the Page UserCenter.  
-(2) The nav bar will hide Inicio de Session link and registro link. The nav bar will show UserCenter link and logout link.  
+(2) The nav bar will hide Inicio de Session link and registro link. The nav bar will show UserCenter link and Logout link.  
 (3) When you go the Page UserCenter, there is a menu on the left and the table on the center.The menu has some options: 
 contacts, projects, and contacts. You can click one option in the menu and then you can see the table shows information 
 relevant to these options and it changes depending on which one you click.  
