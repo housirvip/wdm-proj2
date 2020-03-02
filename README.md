@@ -19,5 +19,6 @@ relevant to these options and it changes depending on which one you click.
 (4) You can click add button, edit button, delete button to manage the information that is showed in the table.  
 (5) When you click the add button, the page will shows a pop-up window to let you add information.  
 (6) When you click the edit button, the page will shows a pop-up window to let you edit information.  
-(7) When you click the delete button, the page will shows a pop-up window to let you confirm to delete or not.  
+(7) When you click the delete button, the page will shows a pop-up window to let you confirm to delete or not.
+(8) When you click the log out link in the nav bar, you will go to the Page Inicio.   
 
