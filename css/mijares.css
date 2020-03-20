@@ -91,12 +91,15 @@ body {
   color: #6059f6;
 }
 .container .nav .header .icon {
-  font-size: 60px;
+  font-size: 80px;
   display: none;
 }
 @media screen and (max-width: 900px) {
   .container .nav .header a {
     font-size: x-large;
+  }
+  .container .nav .header a:link {
+    color: #bcb4ff;
   }
   .container .nav .header a:not(:first-child) {
     display: none;
@@ -117,6 +120,9 @@ body {
   }
   .container .nav .header a {
     font-size: x-large;
+  }
+  .container .nav .header a:link {
+    color: #bcb4ff;
   }
   .container .nav .header.responsive a {
     float: none;
@@ -298,7 +304,7 @@ body {
   left: 20%;
   right: 20%;
   border: 3px solid #f1f1f1;
-  z-index: 9;
+  z-index: 99999;
   width: 60%;
   padding: 10px;
   background-color: white;

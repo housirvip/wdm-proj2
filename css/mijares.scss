@@ -93,7 +93,7 @@ body {
       }
 
       .icon {
-        font-size: 60px;
+        font-size: 80px;
         display: none;
       }
     }
@@ -101,6 +101,9 @@ body {
     @media screen and (max-width: 900px) {
       .header a {
         font-size: x-large;
+      }
+      .header a:link {
+        color: #bcb4ff;
       }
       .header a:not(:first-child) {display: none;}
       .header a.icon {
@@ -118,6 +121,9 @@ body {
       }
       .header a {
         font-size: x-large;
+      }
+      .header a:link {
+        color: #bcb4ff;
       }
       .header.responsive a {
         float: none;
@@ -334,7 +340,7 @@ body {
     left: 20%;
     right: 20%;
     border: 3px solid #f1f1f1;
-    z-index: 9;
+    z-index: 99999;
     width: 60%;
     padding: 10px;
     background-color: white;
