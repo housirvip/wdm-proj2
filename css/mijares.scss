@@ -93,12 +93,12 @@ body {
       }
 
       .icon {
-        font-size: 80px;
+        font-size: 70px;
         display: none;
       }
     }
 
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1080px) {
       .header a {
         font-size: x-large;
       }
@@ -112,7 +112,7 @@ body {
       }
     }
 
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1080px) {
       .header.responsive {position: relative;}
       .header.responsive .icon {
         position: absolute;
@@ -306,7 +306,7 @@ body {
         img {
           max-width: 15px;
           max-height: 15px;
-          margin-left: 40px;
+          margin-left: 20px;
         }
 
         width: 50%;
