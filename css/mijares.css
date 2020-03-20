@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 body {
   min-height: 100%;
   padding: 0;
@@ -88,6 +89,41 @@ body {
 }
 .container .nav .header a.active {
   color: #6059f6;
+}
+.container .nav .header .icon {
+  font-size: 60px;
+  display: none;
+}
+@media screen and (max-width: 900px) {
+  .container .nav .header a {
+    font-size: x-large;
+  }
+  .container .nav .header a:not(:first-child) {
+    display: none;
+  }
+  .container .nav .header a.icon {
+    float: right;
+    display: block;
+  }
+}
+@media screen and (max-width: 900px) {
+  .container .nav .header.responsive {
+    position: relative;
+  }
+  .container .nav .header.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .container .nav .header a {
+    font-size: x-large;
+  }
+  .container .nav .header.responsive a {
+    float: none;
+    display: block;
+    text-align: right;
+    text-align-last: right;
+  }
 }
 .container .content, .container #wrapper {
   margin-left: 10%;
