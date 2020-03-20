@@ -9,6 +9,7 @@ function createHeaderHtml() {
 
         const dashboard = document.createElement("a");
         dashboard.href = "../dashboard.html";
+        dashboard.setAttribute("style", "color:black");
         const dashboardText = document.createTextNode("UserCenter");
         dashboard.appendChild(dashboardText);
         header.appendChild(dashboard);
@@ -17,6 +18,7 @@ function createHeaderHtml() {
         logout.onclick = function () {
             signOut();
         }
+        logout.setAttribute("style", "color:black");
         const logoutText = document.createTextNode("LogOut");
         logout.appendChild(logoutText);
         header.appendChild(logout);
@@ -27,6 +29,7 @@ function createHeaderHtml() {
         login.onclick = function () {
             openLoginForm();
         };
+        login.setAttribute("style", "color:black");
         const loginText = document.createTextNode("Inicio De Sesion");
         login.appendChild(loginText);
         header.appendChild(login);
@@ -35,6 +38,7 @@ function createHeaderHtml() {
         signup.onclick = function () {
             openSignupForm();
         };
+        signup.setAttribute("style", "color:black");
         const signupText = document.createTextNode("Registro");
         signup.appendChild(signupText);
         header.appendChild(signup);
