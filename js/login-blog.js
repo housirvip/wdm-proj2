@@ -4,12 +4,12 @@ function createLoginHtml() {
 
     const loginHtml = "<div class=\"form-popup\" id=\"loginWindow\">\n" +
         "        <div class=\"closeButton\">\n" +
-        "            <img src=\"../images/closeButton.png\" onclick=\"closeLoginForm()\"/>\n" +
+        "            <img src=\"http://xxh8517.uta.cloud/images/closeButton.png\" onclick=\"closeLoginForm()\"/>\n" +
         "        </div>\n" +
         "        <div class=\"container\">\n" +
         "            <div class=\"content\">\n" +
         "                <div class=\"oneElementCenter\">\n" +
-        "                    <img src=\"../images/logo.png\" alt=\"\"/>\n" +
+        "                    <img src=\"http://xxh8517.uta.cloud/images/logo.png\" alt=\"\"/>\n" +
         "                    <h2>CENTRO AUGUSTO MIJARES</h2>\n" +
         "                </div>\n" +
         "                <form id=\"loginForm\">\n" +
@@ -19,7 +19,7 @@ function createLoginHtml() {
         "                        <label for=\"loginPassword\"></label><input type=\"password\" id=\"loginPassword\" placeholder=\"Contraseña\"/>\n" +
         "                    </div>\n" +
         "                    <div>\n" +
-        "                        <a href=\"../dashboard.html\" onclick=\"login()\">Entrar</a>\n" +
+        "                        <a href=\"http://xxh8517.uta.cloud/dashboard.html\" onclick=\"login()\">Entrar</a>\n" +
         "                    </div>\n" +
         "                </form>\n" +
         "            </div>\n" +

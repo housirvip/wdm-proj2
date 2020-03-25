@@ -4,12 +4,12 @@ window.onload = createSignUpHtml();
 function createSignUpHtml() {
     const signupHtml = "    <div class=\"form-popup\" id=\"signupWindow\">\n" +
         "        <div class=\"closeButton\">\n" +
-        "            <img src=\"../images/closeButton.png\" onclick=\"closeSignupForm()\"/>\n" +
+        "            <img src=\"http://xxh8517.uta.cloud/images/closeButton.png\" onclick=\"closeSignupForm()\"/>\n" +
         "        </div>\n" +
         "        <div class=\"container\">\n" +
         "            <div class=\"content\">\n" +
         "                <div class=\"oneElementCenter\">\n" +
-        "                    <img src=\"../images/logo.png\" alt=\"\" style=\"width: 80px; height: 80px\"/>\n" +
+        "                    <img src=\"http://xxh8517.uta.cloud/images/logo.png\" alt=\"\" style=\"width: 80px; height: 80px\"/>\n" +
         "                    <h3>Registro</h3>\n" +
         "                </div>\n" +
         "                <div class=\"row\">\n" +
@@ -27,12 +27,12 @@ function createSignUpHtml() {
         "                                <label for=\"direction\"></label><input type=\"text\" id=\"direction\" placeholder=\"Direccion\"/>\n" +
         "                            </div>\n" +
         "                            <div>\n" +
-        "                                <a href=\"../dashboard.html\" onclick=\"signup()\">Guardar</a>\n" +
+        "                                <a href=\"http://xxh8517.uta.cloud/dashboard.html\" onclick=\"signup()\">Guardar</a>\n" +
         "                            </div>\n" +
         "                        </form>\n" +
         "                    </div>\n" +
         "                    <div class=\"col-12-right\">\n" +
-        "                        <img src=\"../images/logo.png\" alt=\"\"/>\n" +
+        "                        <img src=\"http://xxh8517.uta.cloud/images/logo.png\" alt=\"\"/>\n" +
         "                        <h2>CENTRO AUGUSTO MIJARES</h2>\n" +
         "                    </div>\n" +
         "                </div>\n" +

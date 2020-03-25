@@ -8,7 +8,7 @@ function createHeaderHtml() {
     if (localStorage.getItem("uid") != null) {
 
         const dashboard = document.createElement("a");
-        dashboard.href = "../dashboard.html";
+        dashboard.href = "http://xxh8517.uta.cloud/dashboard.html";
         dashboard.setAttribute("style", "color:black");
         const dashboardText = document.createTextNode("UserCenter");
         dashboard.appendChild(dashboardText);
