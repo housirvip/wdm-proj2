@@ -1,9 +1,14 @@
 <?php
 require('database.php');
-$paths = explode('/', $_SERVER['REQUEST_URI']);
+require('php/equipo.php');
+require('php/user.php');
+
+$paths_full = explode('?', $_SERVER['REQUEST_URI']);
+$paths = explode('/', $paths_full[0]);
 if (count($paths) < 3 || $paths[1] != 'router.php') {
     return;
 }
+//var_dump($paths_full);
 //var_dump($paths);
 
 switch ($paths[2]) {
@@ -13,36 +18,25 @@ switch ($paths[2]) {
     case 'register':
         register();
         break;
+    case 'equipo':
+//        var_dump($_SERVER['REQUEST_METHOD']);
+        switch ($_SERVER['REQUEST_METHOD']) {
+            case 'GET':
+                getEquipo();
+                break;
+            case 'POST':
+                postEquipo();
+                break;
+            case 'PUT':
+                putEquipo();
+                break;
+            case 'DELETE':
+                deleteEquipo();
+                break;
+            default:
+                throw new \Exception('Unexpected method: ' . $_SERVER['REQUEST_METHOD']);
+        }
+        break;
     default:
-        throw new \Exception('Unexpected value');
-}
-
-function login()
-{
-    $mysqli = (new database)->connect();
-    $sql = "select * from user where username='${_POST['username']}' limit 1;";
-    $res = $mysqli->query($sql);
-    if ($res->num_rows == 0) {
-        return;
-    }
-
-    $row = $res->fetch_assoc();
-//    var_dump($row);
-    if ($_POST['password'] == $row["password"]) {
-        echo json_encode($row);
-    } else {
-        echo 'failed';
-    }
-}
-
-function register()
-{
-    $mysqli = (new database)->connect();
-    $sql = "insert into user (username,password,email,phone) values('${_POST['username']}','${_POST['password']}','${_POST['email']}','${_POST['phone']}');";
-    $res = $mysqli->query($sql);
-    if ($res) {
-        echo 'successful';
-    } else {
-        echo 'failed';
-    }
+        throw new \Exception('Unexpected paths: ' . $paths[2]);
 }
