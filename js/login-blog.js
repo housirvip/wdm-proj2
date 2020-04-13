@@ -19,7 +19,7 @@ function createLoginHtml() {
         "                        <label for=\"loginPassword\"></label><input type=\"password\" id=\"loginPassword\" placeholder=\"Contraseña\"/>\n" +
         "                    </div>\n" +
         "                    <div>\n" +
-        "                        <a href=\"http://xxh8517.uta.cloud/dashboard.html\" onclick=\"login()\">Entrar</a>\n" +
+        "                        <button type=\"button\" onclick=\"login()\">Entrar</button>\n" +
         "                    </div>\n" +
         "                </form>\n" +
         "            </div>\n" +
@@ -41,7 +41,36 @@ function closeLoginForm() {
 }
 
 function login() {
-    localStorage.setItem("uid", "1");
+
+    let username = document.getElementById("loginUsername").value;
+    let password = document.getElementById("loginPassword").value;
+
+    if(username === null || username === '') {
+        alert("Username is null!");
+        return;
+    }
+    if(password === null || password === '') {
+        alert("Password is null!");
+        return;
+    }
+
+    $.ajax({
+        url: '/router.php/login',
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({'username': username, 'password': password}),
+        dataType: 'json',
+        async : false,
+        success: function (data) {
+            if(data.code != 0) {
+                alert(data.res);
+                return;
+            }
+            localStorage.setItem("uid", data.res.id);
+            localStorage.setItem("role", data.res.role);
+            location.href = "dashboard.html"
+        }
+    });
 }
 
 function signOut() {
