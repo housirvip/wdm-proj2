@@ -19,7 +19,7 @@ function createLoginHtml() {
         "                        <label for=\"loginPassword\"></label><input type=\"password\" id=\"loginPassword\" placeholder=\"Contraseña\"/>\n" +
         "                    </div>\n" +
         "                    <div>\n" +
-        "                        <a href=\"dashboard.html\" onclick=\"login()\">Entrar</a>\n" +
+        "                        <button type=\"button\" onclick=\"login()\">Entrar</button>\n" +
         "                    </div>\n" +
         "                </form>\n" +
         "            </div>\n" +
@@ -42,6 +42,7 @@ function closeLoginForm() {
 
 function login() {
     localStorage.setItem("uid", "1");
+    location.href = "dashboard.html"
 }
 
 function signOut() {
