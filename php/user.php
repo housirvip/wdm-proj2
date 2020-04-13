@@ -19,6 +19,6 @@ function register()
 {
     $mysqli = (new database)->connect();
     $json = json_decode(file_get_contents('php://input'));
-    $sql = "insert into user (username,password,email,direction) values('$json->username','$json->password','$json->email','$json->direction');";
+    $sql = "insert into user (username,password,email,address) values('$json->username','$json->password','$json->email','$json->address');";
     echo $mysqli->query($sql);
 }
