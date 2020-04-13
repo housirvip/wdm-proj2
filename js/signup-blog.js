@@ -17,17 +17,17 @@ function createSignUpHtml() {
         "                        <form id=\"signupForm\">\n" +
         "                            <div class=\"row\">\n" +
         "                                <label for=\"signupUsername\"></label><input type=\"text\" id=\"signupUsername\" placeholder=\"Numbre\"/>\n" +
-        "                                <label for=\"correo\"></label><input type=\"text\" id=\"correo\" placeholder=\"Correo\"/>\n" +
+        "                                <label for=\"correo\"></label><input type=\"text\" id=\"email\" placeholder=\"Correo\"/>\n" +
         "                            </div>\n" +
         "                            <div class=\"row\">\n" +
         "                                <label for=\"signupPassword\"></label><input type=\"password\" id=\"signupPassword\" placeholder=\"Contraseña\"/>\n" +
         "                                <label for=\"signupPassword2\"></label><input type=\"password\" id=\"signupPassword2\" placeholder=\"Repeater Contraseña\"/>\n" +
         "                            </div>\n" +
         "                            <div class=\"row\">\n" +
-        "                                <label for=\"direction\"></label><input type=\"text\" id=\"direction\" placeholder=\"Direccion\"/>\n" +
+        "                                <label for=\"direction\"></label><input type=\"text\" id=\"address\" placeholder=\"Direccion\"/>\n" +
         "                            </div>\n" +
         "                            <div>\n" +
-        "                                <a href=\"http://xxh8517.uta.cloud/dashboard.html\" onclick=\"signup()\">Guardar</a>\n" +
+        "                                <button type=\"button\" onclick=\"signup()\">Guardar</button>\n" +
         "                            </div>\n" +
         "                        </form>\n" +
         "                    </div>\n" +
@@ -54,5 +54,48 @@ function closeSignupForm() {
 }
 
 function signup() {
-    localStorage.setItem("uid", "1");
+    let username = document.getElementById("signupUsername").value;
+    let password = document.getElementById("signupPassword").value;
+    let password2 = document.getElementById("signupPassword2").value;
+    let email = document.getElementById("email").value;
+    let address = document.getElementById("address").value;
+
+    if(username === null || username === '') {
+        alert("Username is null!");
+        return;
+    }
+    if(password === null || password === '') {
+        alert("Password is null!");
+        return;
+    }
+    if(email === null || email === '') {
+        alert("Email is null!");
+        return;
+    }
+    if(address === null || address === '') {
+        alert("Address is null!");
+        return;
+    }
+    if(password !== password2) {
+        alert("Password and repeat password is different!");
+        return;
+    }
+    if(email.match('@')) {
+        alert('Email format is wrong!');
+        return;
+    }
+
+    $.ajax({
+        url: '/router.php/register',
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({'username': username, 'password': password, 'email': email, 'address': address}),
+        dataType: 'json',
+        async : false,
+        success: function (data) {
+            localStorage.setItem("uid", data.id);
+            localStorage.setItem("role", data.role);
+            location.href = "dashboard.html"
+        }
+    });
 }
