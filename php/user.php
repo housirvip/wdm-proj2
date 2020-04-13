@@ -1,6 +1,6 @@
 <?php
 require('baseResponse.php');
-require('PHPMailer-5.2-stable\PHPMailerAutoload.php');
+require('PHPMailer-5.2-stable/PHPMailerAutoload.php');
 
 function login()
 {
