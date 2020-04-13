@@ -19,7 +19,7 @@ function postEquipo()
 {
     $mysqli = (new database)->connect();
     $json = json_decode(file_get_contents('php://input'));
-    $sql = "insert into equipo (name,email,phone,experience) values('$json->name','$json->email','$json->phone','$json->experience');";
+    $sql = "insert into equipo (name,email,phone,experience,avatar) values('$json->name','$json->email','$json->phone','$json->experience', '$json->avatar');";
     echo $mysqli->query($sql);
 }
 
@@ -27,7 +27,7 @@ function putEquipo()
 {
     $mysqli = (new database)->connect();
     $json = json_decode(file_get_contents('php://input'));
-    $sql = "update equipo set name = '$json->name',email = '$json->email',phone = '$json->phone',experience = '$json->experience' where id = '$json->id';";
+    $sql = "update equipo set name = '$json->name',email = '$json->email',phone = '$json->phone',experience = '$json->experience', avatar = '$json->avatar' where id = '$json->id';";
     echo $mysqli->query($sql);
 }
 

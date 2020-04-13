@@ -142,13 +142,14 @@ body {
 }
 .container .content .row .col-8, .container #wrapper .row .col-8 {
   text-align: center;
-  width: 33%;
+  width: 27%;
   margin-left: 15px;
   margin-right: 15px;
   float: left;
   background-color: #f5f5ff;
   padding-left: 2%;
   padding-right: 2%;
+  overflow: hidden;
 }
 .container .content .row .col-12-left, .container #wrapper .row .col-12-left {
   width: 50%;
