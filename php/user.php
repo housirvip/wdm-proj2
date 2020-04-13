@@ -1,5 +1,6 @@
 <?php
 require('baseResponse.php');
+require('PHPMailer-5.2-stable\PHPMailerAutoload.php');
 
 function login()
 {
@@ -41,5 +42,35 @@ function register()
     $sql = "select * from user where id = $id;";
     $res = $mysqli->query($sql);
     $row = $res->fetch_assoc();
+    email($row['email'],$row['username']);
     echo json_encode($row);
+}
+
+function email($email, $username) {
+    $mail = new PHPMailer;
+
+//    $mail->SMTPDebug = 3; // Enable verbose debug output
+
+    $mail->isSMTP(); // Set mailer to use SMTP
+    $mail->Host = 'smtp.qq.com'; // Specify main and backup SMTP servers
+    $mail->SMTPAuth = true; // Enable SMTP authentication
+    $mail->Username = '2189080041@qq.com'; // SMTP username
+    $mail->Password = 'kqdiznkziudmeccj'; // SMTP password
+    $mail->SMTPSecure = 'ssl'; // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = 465; // TCP port to connect to
+
+    $mail->setFrom('2189080041@qq.com', 'xxh8517.uta.cloud');
+    $mail->addAddress($email, $username);
+
+    $mail->isHTML(true); // Set email format to HTML
+
+    $mail->Subject = 'Register-xxh8517.uta.cloud';
+    $mail->Body = 'Hi,'.$username.'<br>Congratulations! Your registration is successful.';
+
+    if(!$mail->send()) {
+        echo 'Message could not be sent.';
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
+    } else {
+        echo 'Message has been sent';
+    }
 }
