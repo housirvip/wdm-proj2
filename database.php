@@ -5,7 +5,7 @@ class database
     /**
      * @var array
      */
-    private static array $mysql_conf = array(
+    private static $mysql_conf = array(
         'host' => 'xxh8517.uta.cloud:3306',
         'db' => 'xxh8517_WDM',
         'db_user' => 'xxh8517_root',
