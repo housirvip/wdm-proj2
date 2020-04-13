@@ -75,6 +75,7 @@ function login() {
 
 function signOut() {
     localStorage.removeItem("uid");
+    localStorage.removeItem("role");
     location.reload();
 }
 

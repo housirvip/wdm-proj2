@@ -18,6 +18,9 @@ switch ($paths[2]) {
     case 'register':
         register();
         break;
+    case 'email':
+        email();
+        break;
     case 'equipo':
 //        var_dump($_SERVER['REQUEST_METHOD']);
         switch ($_SERVER['REQUEST_METHOD']) {

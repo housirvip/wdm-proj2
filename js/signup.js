@@ -95,7 +95,19 @@ function signup() {
         success: function (data) {
             localStorage.setItem("uid", data.id);
             localStorage.setItem("role", data.role);
+            sendEmail(data.email, data.username);
             location.href = "dashboard.html"
+        }
+    });
+}
+
+function sendEmail(email, username) {
+    $.ajax({
+        url: '/router.php/email?address=' + email + '&username=' + username,
+        type: 'GET',
+        dataType: 'json',
+        async : true,
+        success: function (data) {
         }
     });
 }

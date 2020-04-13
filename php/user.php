@@ -42,11 +42,16 @@ function register()
     $sql = "select * from user where id = $id;";
     $res = $mysqli->query($sql);
     $row = $res->fetch_assoc();
-    email($row['email'],$row['username']);
+//    email($row['email'],$row['username']);
     echo json_encode($row);
 }
 
-function email($email, $username) {
+function email() {
+    $address = $_GET['address'];
+    $username = $_GET['username'];
+
+    echo "send email to ".$username." with ".$address;
+
     $mail = new PHPMailer;
 
 //    $mail->SMTPDebug = 3; // Enable verbose debug output
@@ -60,7 +65,7 @@ function email($email, $username) {
     $mail->Port = 465; // TCP port to connect to
 
     $mail->setFrom('2189080041@qq.com', 'xxh8517.uta.cloud');
-    $mail->addAddress($email, $username);
+    $mail->addAddress($address, $username);
 
     $mail->isHTML(true); // Set email format to HTML
 
