@@ -6,10 +6,10 @@ class database
      * @var array
      */
     private static array $mysql_conf = array(
-        'host' => '127.0.0.1:3306',
-        'db' => 'mijares',
-        'db_user' => 'root',
-        'db_pwd' => 'housirvip',
+        'host' => 'xxh8517.uta.cloud:3306',
+        'db' => 'xxh8517_WDM',
+        'db_user' => 'xxh8517_root',
+        'db_pwd' => 'uta!#%&(12345678',
     );
 
     private static $mysqli = null;

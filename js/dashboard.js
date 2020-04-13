@@ -67,7 +67,7 @@ function addAllColumnHeaders(arr, table) {
     return columnSet;
 }
 
-let lastTab = "contact";
+let lastTab = "equipo";
 let currentData = null;
 
 function changeTab(key) {
@@ -84,7 +84,7 @@ function renderTable() {
     tableDiv.innerHTML = "";
     let url;
     switch (lastTab) {
-        case "contact":
+        case "equipo":
             url = '/router.php/equipo';
             break;
         case "event":
@@ -108,33 +108,33 @@ function renderTable() {
 }
 
 function openAddForm() {
-    if (lastTab === "contact") {
-        document.getElementById("addContact").style.display = "block";
+    if (lastTab === "equipo") {
+        document.getElementById("addEquipo").style.display = "block";
     } else if (lastTab === "event") {
         document.getElementById("addEvent").style.display = "block";
     } else if (lastTab === "project") {
         document.getElementById("addProject").style.display = "block";
     } else {
-        document.getElementById("addContact").style.display = "block";
+        document.getElementById("addEquipo").style.display = "block";
     }
 }
 
 function closeAddForm() {
-    if (lastTab === "contact") {
-        document.getElementById("addContact").style.display = "none";
+    if (lastTab === "equipo") {
+        document.getElementById("addEquipo").style.display = "none";
     } else if (lastTab === "event") {
         document.getElementById("addEvent").style.display = "none";
     } else if (lastTab === "project") {
         document.getElementById("addProject").style.display = "none";
     } else {
-        document.getElementById("addContact").style.display = "none";
+        document.getElementById("addEquipo").style.display = "none";
     }
 }
 
 function submitAddForm() {
     let url;
     currentData = {};
-    if (lastTab === "contact") {
+    if (lastTab === "equipo") {
         url = '/router.php/equipo';
         currentData.name = document.getElementById("user").value;
         currentData.email = document.getElementById("email").value;
@@ -167,8 +167,8 @@ function submitAddForm() {
 
 function openEditForm() {
     console.log(currentData);
-    if (lastTab === "contact") {
-        document.getElementById("editContact").style.display = "block";
+    if (lastTab === "equipo") {
+        document.getElementById("editEquipo").style.display = "block";
         document.getElementById("userEdit").value = currentData.name;
         document.getElementById("emailEdit").value = currentData.email;
         document.getElementById("phoneEdit").value = currentData.phone;
@@ -179,30 +179,31 @@ function openEditForm() {
     } else if (lastTab === "project") {
         document.getElementById("editProject").style.display = "block";
     } else {
-        document.getElementById("editContact").style.display = "block";
+        document.getElementById("editEquipo").style.display = "block";
     }
 }
 
 function closeEditForm() {
-    if (lastTab === "contact") {
-        document.getElementById("editContact").style.display = "none";
+    if (lastTab === "equipo") {
+        document.getElementById("editEquipo").style.display = "none";
     } else if (lastTab === "event") {
         document.getElementById("editEvent").style.display = "none";
     } else if (lastTab === "project") {
         document.getElementById("editProject").style.display = "none";
     } else {
-        document.getElementById("editContact").style.display = "none";
+        document.getElementById("editEquipo").style.display = "none";
     }
 }
 
 function submitEditForm() {
     let url;
-    if (lastTab === "contact") {
+    if (lastTab === "equipo") {
         url = '/router.php/equipo';
         currentData.name = document.getElementById("userEdit").value;
         currentData.email = document.getElementById("emailEdit").value;
         currentData.phone = document.getElementById("phoneEdit").value;
         currentData.experience = document.getElementById("experienceEdit").value;
+        currentData.avatar = document.getElementById("avatarEdit").value;
     } else if (lastTab === "event") {
         url = '/router.php/event';
     } else if (lastTab === "project") {
@@ -228,32 +229,32 @@ function submitEditForm() {
 }
 
 function openDeleteForm() {
-    if (lastTab === "contact") {
-        document.getElementById("deleteContact").style.display = "block";
+    if (lastTab === "equipo") {
+        document.getElementById("deleteEquipo").style.display = "block";
     } else if (lastTab === "event") {
         document.getElementById("deleteEvent").style.display = "block";
     } else if (lastTab === "project") {
         document.getElementById("deleteProject").style.display = "block";
     } else {
-        document.getElementById("deleteContact").style.display = "block";
+        document.getElementById("deleteEquipo").style.display = "block";
     }
 }
 
 function closeDeleteForm() {
-    if (lastTab === "contact") {
-        document.getElementById("deleteContact").style.display = "none";
+    if (lastTab === "equipo") {
+        document.getElementById("deleteEquipo").style.display = "none";
     } else if (lastTab === "event") {
         document.getElementById("deleteEvent").style.display = "none";
     } else if (lastTab === "project") {
         document.getElementById("deleteProject").style.display = "none";
     } else {
-        document.getElementById("deleteContact").style.display = "none";
+        document.getElementById("deleteEquipo").style.display = "none";
     }
 }
 
 function submitDeleteForm() {
     let url;
-    if (lastTab === "contact") {
+    if (lastTab === "equipo") {
         url = '/router.php/equipo';
     } else if (lastTab === "event") {
         url = '/router.php/event';
