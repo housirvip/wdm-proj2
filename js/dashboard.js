@@ -21,8 +21,9 @@ function buildHtmlTable(arr) {
         const editButton = document.createElement("button");
         editButton.className = "editButton";
         editButton.onclick = function () {
+            currentData = arr[i];
             openEditForm();
-        }
+        };
         const editButtonText = document.createTextNode("Edit");
         editButton.appendChild(editButtonText);
         operationDiv.appendChild(editButton);
@@ -30,8 +31,9 @@ function buildHtmlTable(arr) {
         const deleteButton = document.createElement("button");
         deleteButton.className = "deleteButton";
         deleteButton.onclick = function () {
+            currentData = arr[i];
             openDeleteForm();
-        }
+        };
         const deleteButtonText = document.createTextNode("Delete");
         deleteButton.appendChild(deleteButtonText);
         operationDiv.appendChild(deleteButton);
@@ -65,32 +67,8 @@ function addAllColumnHeaders(arr, table) {
     return columnSet;
 }
 
-const contact = [
-    {"ID": 1, "User": "Bob", "Company": "Alfreds Futterkiste", "Country": "Germany", "Phone": "(682)123-1234"},
-    {"ID": 2, "User": "Tom", "Company": "Alfreds Futterkiste", "Country": "Germany", "Phone": "(682)123-1234"},
-    {"ID": 3, "User": "Chris", "Company": "Alfreds Futterkiste", "Country": "Germany", "Phone": "(682)123-1234"},
-    {"ID": 4, "User": "Betty", "Company": "Alfreds Futterkiste", "Country": "Germany", "Phone": "(682)123-1234"},
-];
-const events = [
-    {"ID": 1, "Title": "Apple IPhone 11 Pro Max 50% discount", "Date": "2020-01-28 05:54:37"},
-    {"ID": 2, "Title": "Apple IPhone 12 Pro Max 60% discount", "Date": "2020-01-28 05:54:37"},
-    {"ID": 3, "Title": "Apple IPhone 13 Pro Max 70% discount", "Date": "2020-01-28 05:54:37"},
-    {"ID": 4, "Title": "Apple IPhone 14 Pro Max 80% discount", "Date": "2020-01-28 05:54:37"},
-];
-const projects = [
-    {"ID": 1, "Title": "Bootstrap version 5 has released", "Date": "2020-01-28 05:54:37"},
-    {"ID": 2, "Title": "Bootstrap version 6 has released", "Date": "2020-01-28 05:54:37"},
-    {"ID": 3, "Title": "Bootstrap version 7 has released", "Date": "2020-01-28 05:54:37"},
-    {"ID": 4, "Title": "Bootstrap version 8 has released", "Date": "2020-01-28 05:54:37"},
-];
-// const messages = [
-//     {"ID": 1, "Title": "Betty send you a private message", "Date": "2020-01-28 05:54:37"},
-//     {"ID": 1, "Title": "Tom send you a private message", "Date": "2020-01-28 05:54:37"},
-//     {"ID": 1, "Title": "Chris send you a private message", "Date": "2020-01-28 05:54:37"},
-//     {"ID": 1, "Title": "Bob send you a private message", "Date": "2020-01-28 05:54:37"},
-// ];
-
 let lastTab = "contact";
+let currentData = null;
 
 function changeTab(key) {
     if (lastTab) {
@@ -98,37 +76,43 @@ function changeTab(key) {
     }
     lastTab = key;
     document.getElementById(lastTab).classList.add("active");
-    renderTable(key)
+    renderTable()
 }
 
-function renderTable(key) {
+function renderTable() {
     const tableDiv = document.getElementById("table");
     tableDiv.innerHTML = "";
-    switch (key) {
+    let url;
+    switch (lastTab) {
         case "contact":
-            tableDiv.appendChild(buildHtmlTable(contact));
+            url = '/router.php/equipo';
             break;
         case "event":
-            tableDiv.appendChild(buildHtmlTable(events));
+            url = '/router.php/event';
             break;
         case "project":
-            tableDiv.appendChild(buildHtmlTable(projects));
+            url = '/router.php/project';
             break;
-        // case "message":
-        //     tableDiv.appendChild(buildHtmlTable(messages));
-        //     break;
         default:
-            tableDiv.appendChild(buildHtmlTable(contact));
+            url = '/router.php/equipo';
     }
+    $.ajax({
+        url: url,
+        type: "GET",
+        dataType: "json",
+        success: function (data) {
+            currentData = data;
+            tableDiv.appendChild(buildHtmlTable(data));
+        }
+    });
 }
 
-
 function openAddForm() {
-    if (lastTab == "contact") {
+    if (lastTab === "contact") {
         document.getElementById("addContact").style.display = "block";
-    } else if(lastTab == "event") {
+    } else if (lastTab === "event") {
         document.getElementById("addEvent").style.display = "block";
-    } else if(lastTab == "project") {
+    } else if (lastTab === "project") {
         document.getElementById("addProject").style.display = "block";
     } else {
         document.getElementById("addContact").style.display = "block";
@@ -136,23 +120,63 @@ function openAddForm() {
 }
 
 function closeAddForm() {
-    if (lastTab == "contact") {
+    if (lastTab === "contact") {
         document.getElementById("addContact").style.display = "none";
-    } else if(lastTab == "event") {
+    } else if (lastTab === "event") {
         document.getElementById("addEvent").style.display = "none";
-    } else if(lastTab == "project") {
+    } else if (lastTab === "project") {
         document.getElementById("addProject").style.display = "none";
     } else {
         document.getElementById("addContact").style.display = "none";
     }
 }
 
+function submitAddForm() {
+    let url;
+    currentData = {};
+    if (lastTab === "contact") {
+        url = '/router.php/equipo';
+        currentData.name = document.getElementById("user").value;
+        currentData.email = document.getElementById("email").value;
+        currentData.phone = document.getElementById("phone").value;
+        currentData.experience = document.getElementById("experience").value;
+        currentData.avatar = document.getElementById("avatar").value;
+    } else if (lastTab === "event") {
+        url = '/router.php/event';
+    } else if (lastTab === "project") {
+        url = '/router.php/project';
+    } else {
+        url = '/router.php/equipo';
+    }
+    closeAddForm();
+    $.ajax({
+        url: url,
+        type: "POST",
+        data: JSON.stringify(currentData),
+        dataType: "json",
+        success: function (data) {
+            if (data) {
+                renderTable();
+            } else {
+                alert('failed');
+            }
+        }
+    });
+    console.log(currentData);
+}
+
 function openEditForm() {
-    if (lastTab == "contact") {
+    console.log(currentData);
+    if (lastTab === "contact") {
         document.getElementById("editContact").style.display = "block";
-    } else if(lastTab == "event") {
+        document.getElementById("userEdit").value = currentData.name;
+        document.getElementById("emailEdit").value = currentData.email;
+        document.getElementById("phoneEdit").value = currentData.phone;
+        document.getElementById("experienceEdit").value = currentData.experience;
+        document.getElementById("avatarEdit").value = currentData.avatar;
+    } else if (lastTab === "event") {
         document.getElementById("editEvent").style.display = "block";
-    } else if(lastTab == "project") {
+    } else if (lastTab === "project") {
         document.getElementById("editProject").style.display = "block";
     } else {
         document.getElementById("editContact").style.display = "block";
@@ -160,23 +184,55 @@ function openEditForm() {
 }
 
 function closeEditForm() {
-    if (lastTab == "contact") {
+    if (lastTab === "contact") {
         document.getElementById("editContact").style.display = "none";
-    } else if(lastTab == "event") {
+    } else if (lastTab === "event") {
         document.getElementById("editEvent").style.display = "none";
-    } else if(lastTab == "project") {
+    } else if (lastTab === "project") {
         document.getElementById("editProject").style.display = "none";
     } else {
         document.getElementById("editContact").style.display = "none";
     }
 }
 
+function submitEditForm() {
+    let url;
+    if (lastTab === "contact") {
+        url = '/router.php/equipo';
+        currentData.name = document.getElementById("userEdit").value;
+        currentData.email = document.getElementById("emailEdit").value;
+        currentData.phone = document.getElementById("phoneEdit").value;
+        currentData.experience = document.getElementById("experienceEdit").value;
+    } else if (lastTab === "event") {
+        url = '/router.php/event';
+    } else if (lastTab === "project") {
+        url = '/router.php/project';
+    } else {
+        url = '/router.php/equipo';
+    }
+    closeEditForm();
+    $.ajax({
+        url: url,
+        type: "PUT",
+        data: JSON.stringify(currentData),
+        dataType: "json",
+        success: function (data) {
+            if (data) {
+                renderTable();
+            } else {
+                alert('failed');
+            }
+        }
+    });
+    console.log(currentData);
+}
+
 function openDeleteForm() {
-    if (lastTab == "contact") {
+    if (lastTab === "contact") {
         document.getElementById("deleteContact").style.display = "block";
-    } else if(lastTab == "event") {
+    } else if (lastTab === "event") {
         document.getElementById("deleteEvent").style.display = "block";
-    } else if(lastTab == "project") {
+    } else if (lastTab === "project") {
         document.getElementById("deleteProject").style.display = "block";
     } else {
         document.getElementById("deleteContact").style.display = "block";
@@ -184,15 +240,42 @@ function openDeleteForm() {
 }
 
 function closeDeleteForm() {
-    if (lastTab == "contact") {
+    if (lastTab === "contact") {
         document.getElementById("deleteContact").style.display = "none";
-    } else if(lastTab == "event") {
+    } else if (lastTab === "event") {
         document.getElementById("deleteEvent").style.display = "none";
-    } else if(lastTab == "project") {
+    } else if (lastTab === "project") {
         document.getElementById("deleteProject").style.display = "none";
     } else {
         document.getElementById("deleteContact").style.display = "none";
     }
+}
+
+function submitDeleteForm() {
+    let url;
+    if (lastTab === "contact") {
+        url = '/router.php/equipo';
+    } else if (lastTab === "event") {
+        url = '/router.php/event';
+    } else if (lastTab === "project") {
+        url = '/router.php/project';
+    } else {
+        url = '/router.php/equipo';
+    }
+    closeDeleteForm();
+    $.ajax({
+        url: url + '?id=' + currentData.id,
+        type: "DELETE",
+        dataType: "json",
+        success: function (data) {
+            if (data) {
+                renderTable();
+            } else {
+                alert('failed');
+            }
+        }
+    });
+    console.log(currentData);
 }
 
 window.onload = renderTable;

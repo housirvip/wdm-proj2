@@ -32,10 +32,10 @@
         </div>
         <div class="row">
             <div class="vertical-menu">
-                <a id="contact" href="#" onclick="changeTab('contact')" class="active">Contacts</a>
+                <a id="contact" href="#" onclick="changeTab('contact')" class="active">Equipo</a>
                 <a id="event" href="#" onclick="changeTab('event')">Events</a>
                 <a id="project" href="#" onclick="changeTab('project')">Projects</a>
-<!--                <a id="message" href="#" onclick="changeTab('message')">Messages</a>-->
+                <!--                <a id="message" href="#" onclick="changeTab('message')">Messages</a>-->
             </div>
             <div id="table-wrapper">
                 <button class="addButton" onclick="openAddForm()">+ Add</button>
@@ -82,7 +82,7 @@
             <div class="content">
                 <div class="oneElementCenter">
                     <img src="images/logo.png" alt=""/>
-                    <h3>Add new contact information</h3>
+                    <h3>Add new equipo information</h3>
                 </div>
                 <form class="dashboardForm">
                     <div class="row">
@@ -95,18 +95,10 @@
                     </div>
                     <div class="row">
                         <div class="col-12-label">
-                            <label for="company">company:</label>
+                            <label for="email">email:</label>
                         </div>
                         <div class="col-12-input">
-                            <input type="text" id="company"/>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12-label">
-                            <label for="country">country:</label>
-                        </div>
-                        <div class="col-12-input">
-                            <input type="text" id="country"/>
+                            <input type="text" id="email"/>
                         </div>
                     </div>
                     <div class="row">
@@ -117,8 +109,24 @@
                             <input type="text" id="phone"/>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="experience">experience:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="experience"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="avatar">avatar:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="avatar"/>
+                        </div>
+                    </div>
                     <div style="text-align: center">
-                        <button onclick="closeAddForm()" type="submit">Entrar</button>
+                        <button onclick="submitAddForm()">Entrar</button>
                     </div>
                 </form>
             </div>
@@ -160,7 +168,7 @@
                         </div>
                     </div>
                     <div style="text-align: center">
-                        <button onclick="closeAddForm()" type="submit">Entrar</button>
+                        <button onclick="closeAddForm()">Entrar</button>
                     </div>
                 </form>
             </div>
@@ -202,7 +210,7 @@
                         </div>
                     </div>
                     <div style="text-align: center">
-                        <button onclick="closeAddForm()" type="submit">Entrar</button>
+                        <button onclick="closeAddForm()">Entrar</button>
                     </div>
                 </form>
             </div>
@@ -217,7 +225,7 @@
             <div class="content">
                 <div class="oneElementCenter">
                     <img src="images/logo.png" alt=""/>
-                    <h3>Edit a contact information</h3>
+                    <h3>Edit a equipo information</h3>
                 </div>
                 <form class="dashboardForm">
                     <div class="row">
@@ -230,18 +238,10 @@
                     </div>
                     <div class="row">
                         <div class="col-12-label">
-                            <label for="companyEdit">company:</label>
+                            <label for="emailEdit">email:</label>
                         </div>
                         <div class="col-12-input">
-                            <input type="text" id="companyEdit" value="Alfreds Futterkiste"/>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12-label">
-                            <label for="countryEdit">country:</label>
-                        </div>
-                        <div class="col-12-input">
-                            <input type="text" id="countryEdit" value="Germany"/>
+                            <input type="text" id="emailEdit" value="asd@asd.asd"/>
                         </div>
                     </div>
                     <div class="row">
@@ -252,8 +252,24 @@
                             <input type="text" id="phoneEdit" value="(682)123-1234"/>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="experienceEdit">experience:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="experienceEdit" value="asdasd"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="avatarEdit">avatar:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="avatarEdit" value="asdasd"/>
+                        </div>
+                    </div>
                     <div style="text-align: center">
-                        <button onclick="closeEditForm()" type="submit">Entrar</button>
+                        <button onclick="submitEditForm()">Entrar</button>
                     </div>
                 </form>
             </div>
@@ -295,7 +311,7 @@
                         </div>
                     </div>
                     <div style="text-align: center">
-                        <button onclick="closeEditForm()" type="submit">Entrar</button>
+                        <button onclick="closeEditForm()">Entrar</button>
                     </div>
                 </form>
             </div>
@@ -337,7 +353,7 @@
                         </div>
                     </div>
                     <div style="text-align: center">
-                        <button onclick="closeEditForm()" type="submit">Entrar</button>
+                        <button onclick="closeEditForm()">Entrar</button>
                     </div>
                 </form>
             </div>
@@ -349,12 +365,12 @@
             <img src="images/closeButton.png" onclick="closeDeleteForm()"/>
         </div>
         <div class="oneElementCenter">
-            <h2>Do you want to delete this contact?</h2>
+            <h2>Do you want to delete this equipo?</h2>
         </div>
         <form class="dashboardForm">
             <div class="row" style="text-align: center">
                 <div class="col-12">
-                    <button class="deleteButton" onclick="closeDeleteForm()">Delete</button>
+                    <button class="deleteButton" onclick="submitDeleteForm()">Delete</button>
                 </div>
                 <div class="col-12">
                     <button class="cancelButton" onclick="closeDeleteForm()">Cancel</button>
@@ -373,7 +389,7 @@
         <form class="dashboardForm">
             <div class="row" style="text-align: center">
                 <div class="col-12">
-                    <button class="deleteButton" onclick="closeDeleteForm()">Delete</button>
+                    <button class="deleteButton" onclick="submitDeleteForm()">Delete</button>
                 </div>
                 <div class="col-12">
                     <button class="cancelButton" onclick="closeDeleteForm()">Cancel</button>
@@ -392,7 +408,7 @@
         <form class="dashboardForm">
             <div class="row" style="text-align: center">
                 <div class="col-12">
-                    <button class="deleteButton" onclick="closeDeleteForm()">Delete</button>
+                    <button class="deleteButton" onclick="submitDeleteForm()">Delete</button>
                 </div>
                 <div class="col-12">
                     <button class="cancelButton" onclick="closeDeleteForm()">Cancel</button>
