@@ -153,22 +153,30 @@
                     </div>
                     <div class="row">
                         <div class="col-12-label">
-                            <label for="eventDate">date:</label>
-                        </div>
-                        <div class="col-12-input">
-                            <input type="text" id="eventDate"/>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12-label">
                             <label for="eventContent">content:</label>
                         </div>
                         <div class="col-12-input">
                             <input type="text" id="eventContent"/>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="eventFacultyIdEdit">faculty_id:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="eventFacultyId" value="1"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="eventImageUrlEdit">image_url:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="eventImageUrl" value="1"/>
+                        </div>
+                    </div>
                     <div style="text-align: center">
-                        <button onclick="closeAddForm()">Entrar</button>
+                        <button onclick="submitAddForm()">Entrar</button>
                     </div>
                 </form>
             </div>
@@ -195,10 +203,10 @@
                     </div>
                     <div class="row">
                         <div class="col-12-label">
-                            <label for="projectDate">date:</label>
+                            <label for="projectSubTitle">subtitle:</label>
                         </div>
                         <div class="col-12-input">
-                            <input type="text" id="projectDate"/>
+                            <input type="text" id="projectSubTitle"/>
                         </div>
                     </div>
                     <div class="row">
@@ -210,7 +218,7 @@
                         </div>
                     </div>
                     <div style="text-align: center">
-                        <button onclick="closeAddForm()">Entrar</button>
+                        <button onclick="submitAddForm()">Entrar</button>
                     </div>
                 </form>
             </div>
@@ -296,22 +304,30 @@
                     </div>
                     <div class="row">
                         <div class="col-12-label">
-                            <label for="eventDateEdit">date:</label>
-                        </div>
-                        <div class="col-12-input">
-                            <input type="text" id="eventDateEdit" value="2020-01-28 05:54:37"/>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12-label">
                             <label for="eventContentEdit">content:</label>
                         </div>
                         <div class="col-12-input">
                             <input type="text" id="eventContentEdit"/>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="eventFacultyIdEdit">faculty_id:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="eventFacultyIdEdit" value="1"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12-label">
+                            <label for="eventImageUrlEdit">image_url:</label>
+                        </div>
+                        <div class="col-12-input">
+                            <input type="text" id="eventImageUrlEdit" value="1"/>
+                        </div>
+                    </div>
                     <div style="text-align: center">
-                        <button onclick="closeEditForm()">Entrar</button>
+                        <button onclick="submitEditForm()">Entrar</button>
                     </div>
                 </form>
             </div>
@@ -338,10 +354,10 @@
                     </div>
                     <div class="row">
                         <div class="col-12-label">
-                            <label for="projectDateEdit">date:</label>
+                            <label for="projectSubTitleEdit">subtitle:</label>
                         </div>
                         <div class="col-12-input">
-                            <input type="text" id="projectDateEdit" value="2020-01-28 05:54:37"/>
+                            <input type="text" id="projectSubTitleEdit" value="Bootstrap version 5 has released"/>
                         </div>
                     </div>
                     <div class="row">
@@ -353,7 +369,7 @@
                         </div>
                     </div>
                     <div style="text-align: center">
-                        <button onclick="closeEditForm()">Entrar</button>
+                        <button onclick="submitEditForm()">Entrar</button>
                     </div>
                 </form>
             </div>

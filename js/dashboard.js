@@ -142,9 +142,16 @@ function submitAddForm() {
         currentData.experience = document.getElementById("experience").value;
         currentData.avatar = document.getElementById("avatar").value;
     } else if (lastTab === "event") {
+        currentData.title = document.getElementById("eventTitle").value;
+        currentData.content = document.getElementById("eventContent").value;
+        currentData.faculty_id = document.getElementById("eventFacultyId").value;
+        currentData.image_url = document.getElementById("eventImageUrl").value;
         url = '/router.php/event';
     } else if (lastTab === "project") {
         url = '/router.php/project';
+        currentData.title = document.getElementById("projectTitle").value;
+        currentData.subtitle = document.getElementById("projectSubTitle").value;
+        currentData.content = document.getElementById("projectContent").value;
     } else {
         url = '/router.php/equipo';
     }
@@ -176,14 +183,22 @@ function openEditForm() {
         document.getElementById("avatarEdit").value = currentData.avatar;
     } else if (lastTab === "event") {
         document.getElementById("editEvent").style.display = "block";
+        document.getElementById("eventTitleEdit").value = currentData.title;
+        document.getElementById("eventContentEdit").value = currentData.content;
+        document.getElementById("eventFacultyIdEdit").value = currentData.faculty_id;
+        document.getElementById("eventImageUrlEdit").value = currentData.image_url;
     } else if (lastTab === "project") {
         document.getElementById("editProject").style.display = "block";
+        document.getElementById("projectTitleEdit").value = currentData.title;
+        document.getElementById("projectSubTitleEdit").value = currentData.subtitle;
+        document.getElementById("projectContentEdit").value = currentData.content;
     } else {
         document.getElementById("editEquipo").style.display = "block";
     }
 }
 
 function closeEditForm() {
+    currentData = {};
     if (lastTab === "equipo") {
         document.getElementById("editEquipo").style.display = "none";
     } else if (lastTab === "event") {
@@ -206,8 +221,15 @@ function submitEditForm() {
         currentData.avatar = document.getElementById("avatarEdit").value;
     } else if (lastTab === "event") {
         url = '/router.php/event';
+        currentData.title = document.getElementById("eventTitleEdit").value;
+        currentData.content = document.getElementById("eventContentEdit").value;
+        currentData.faculty_id = document.getElementById("eventFacultyIdEdit").value;
+        currentData.image_url = document.getElementById("eventImageUrlEdit").value;
     } else if (lastTab === "project") {
         url = '/router.php/project';
+        currentData.title = document.getElementById("projectTitleEdit").value;
+        currentData.subtitle = document.getElementById("projectSubTitleEdit").value;
+        currentData.content = document.getElementById("projectContentEdit").value;
     } else {
         url = '/router.php/equipo';
     }

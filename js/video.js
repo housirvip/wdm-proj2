@@ -1,6 +1,6 @@
 window.onload = function () {
 
-    const data = getEquipo();
+    const data = getVideo();
     let rowId = 0;
     $.each(data, function (index, value) {
         if (index % 3 === 0) {
@@ -15,20 +15,20 @@ window.onload = function () {
         const colElement = document.createElement("col");
         colElement.className = "col-8";
         colElement.innerHTML = "<br>\n" +
-            "                <img src=\"" + value.avatar + "\" alt=\"\"/>\n" +
-            "                <h3>" + value.name + "</h3>\n" +
-            "                <p>" + value.experience + "</p>\n" +
-            "                <p>Teléf.: " + value.phone + "</p>\n" +
-            "                <p>E-mail: " + value.email + "</p>";
+            "                <iframe width=\"350\" height=\"200\" src=\"" + value.url + "\" frameborder=\"0\"\n" +
+            "                        allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\"\n" +
+            "                        allowfullscreen></iframe>\n" +
+            "                <h3>" + value.author + "</h3>\n" +
+            "                <p>" + value.description + "</p>";
         rowElement.appendChild(colElement);
     });
 };
 
-function getEquipo() {
+function getVideo() {
 
     let res;
     $.ajax({
-        url: '/router.php/equipo',
+        url: '/router.php/video',
         type: "GET",
         dataType: "json",
         async: false,
