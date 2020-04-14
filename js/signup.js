@@ -96,6 +96,7 @@ function signup() {
             localStorage.setItem("uid", data.id);
             localStorage.setItem("role", data.role);
             sendEmail(data.email, data.username);
+            alert("Congratulation! Your registration is successful and an email has been sent to your email-box.")
             location.href = "dashboard.html"
         }
     });
@@ -103,7 +104,7 @@ function signup() {
 
 function sendEmail(email, username) {
     $.ajax({
-        url: '/router.php/email?address=' + email + '&username=' + username,
+        url: 'http://35.193.61.114:6062/email/send?address=' + email + '&username=' + username,
         type: 'GET',
         dataType: 'json',
         async : true,
