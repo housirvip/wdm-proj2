@@ -93,6 +93,9 @@ function renderTable() {
         case "project":
             url = '/router.php/project';
             break;
+        case "video":
+            url = '/router.php/video';
+            break;
         default:
             url = '/router.php/equipo';
     }
@@ -115,6 +118,8 @@ function openAddForm() {
         document.getElementById("addEvent").style.display = "block";
     } else if (lastTab === "project") {
         document.getElementById("addProject").style.display = "block";
+    } else if (lastTab === "video") {
+        document.getElementById("addVideo").style.display = "block";
     } else {
         document.getElementById("addEquipo").style.display = "block";
     }
@@ -127,6 +132,8 @@ function closeAddForm() {
         document.getElementById("addEvent").style.display = "none";
     } else if (lastTab === "project") {
         document.getElementById("addProject").style.display = "none";
+    } else if (lastTab === "video") {
+        document.getElementById("addVideo").style.display = "none";
     } else {
         document.getElementById("addEquipo").style.display = "none";
     }
@@ -155,6 +162,11 @@ function submitAddForm() {
         let image1Url = document.getElementById("projectImage1").value;
         let image2Url = document.getElementById("projectImage2").value;
         currentData.image_url = image1Url + "," + image2Url;
+    } else if (lastTab === "video") {
+        currentData.author = document.getElementById("videoAuthor").value;
+        currentData.description = document.getElementById("videoDescription").value;
+        currentData.url = document.getElementById("videoUrl").value;
+        url = '/router.php/video';
     } else {
         url = '/router.php/equipo';
     }
@@ -197,6 +209,11 @@ function openEditForm() {
         } else {
             document.getElementById("projectImage1Edit").value = currentData.image_url;
         }
+    } else if (lastTab === "video") {
+        document.getElementById("editVideo").style.display = "block";
+        document.getElementById("videoAuthorEdit").value = currentData.author;
+        document.getElementById("videoDescriptionEdit").value = currentData.description;
+        document.getElementById("videoUrlEdit").value = currentData.url;
     } else {
         document.getElementById("editEquipo").style.display = "block";
     }
@@ -209,6 +226,8 @@ function closeEditForm() {
         document.getElementById("editEvent").style.display = "none";
     } else if (lastTab === "project") {
         document.getElementById("editProject").style.display = "none";
+    } else if (lastTab === "video") {
+        document.getElementById("editVideo").style.display = "none";
     } else {
         document.getElementById("editEquipo").style.display = "none";
     }
@@ -236,6 +255,11 @@ function submitEditForm() {
         let image1Url = document.getElementById("projectImage1Edit").value;
         let image2Url = document.getElementById("projectImage2Edit").value;
         currentData.image_url = image1Url + "," + image2Url;
+    } else if (lastTab === "video") {
+        currentData.author = document.getElementById("videoAuthorEdit").value;
+        currentData.description = document.getElementById("videoDescriptionEdit").value;
+        currentData.url = document.getElementById("videoUrlEdit").value;
+        url = '/router.php/video';
     } else {
         url = '/router.php/equipo';
     }
@@ -260,6 +284,8 @@ function openDeleteForm() {
         document.getElementById("deleteEvent").style.display = "block";
     } else if (lastTab === "project") {
         document.getElementById("deleteProject").style.display = "block";
+    } else if (lastTab === "video") {
+        document.getElementById("deleteVideo").style.display = "block";
     } else {
         document.getElementById("deleteEquipo").style.display = "block";
     }
@@ -272,6 +298,8 @@ function closeDeleteForm() {
         document.getElementById("deleteEvent").style.display = "none";
     } else if (lastTab === "project") {
         document.getElementById("deleteProject").style.display = "none";
+    } else if (lastTab === "video") {
+        document.getElementById("deleteVideo").style.display = "none";
     } else {
         document.getElementById("deleteEquipo").style.display = "none";
     }
@@ -285,6 +313,8 @@ function submitDeleteForm() {
         url = '/router.php/event';
     } else if (lastTab === "project") {
         url = '/router.php/project';
+    } else if (lastTab === "video") {
+        url = '/router.php/video';
     } else {
         url = '/router.php/equipo';
     }

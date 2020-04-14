@@ -14,12 +14,14 @@ window.onload = function () {
         const rowElement = document.getElementById("row" + rowId);
         const colElement = document.createElement("col");
         colElement.className = "col-8";
+        value.url = value.url.replace("https://www.youtube.com/watch?v=", "https://www.youtube.com/embed/");
         colElement.innerHTML = "<br>\n" +
             "                <iframe width=\"350\" height=\"200\" src=\"" + value.url + "\" frameborder=\"0\"\n" +
             "                        allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\"\n" +
             "                        allowfullscreen></iframe>\n" +
             "                <h3>" + value.author + "</h3>\n" +
-            "                <p>" + value.description + "</p>";
+            "                <p>" + value.description + "</p>" +
+            "                <p> URL: " + value.url + "</p>";
         rowElement.appendChild(colElement);
     });
 };
