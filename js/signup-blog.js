@@ -106,7 +106,7 @@ function signup() {
             localStorage.setItem("role", data.role);
             sendEmail(data.email, data.username);
             alert("Congratulation! Your registration is successful and an email has been sent to your email-box.")
-            location.href = "dashboard.html"
+            location.href = "../dashboard.html"
         }
     });
 }

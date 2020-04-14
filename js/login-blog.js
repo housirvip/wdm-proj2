@@ -68,7 +68,7 @@ function login() {
             }
             localStorage.setItem("uid", data.res.id);
             localStorage.setItem("role", data.res.role);
-            location.href = "dashboard.html"
+            location.href = "../dashboard.html"
         }
     });
 }
