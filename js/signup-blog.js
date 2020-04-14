@@ -28,7 +28,7 @@ function createSignUpHtml() {
         "                                <input type=\"password\" id=\"signupPassword\" placeholder=\"Contraseña\"/>\n" +
         "                            </div>\n" +
         "                            <div class=\"row\">\n" +
-        "                                <label for=\"signupPassword2\">RepeatPassword: </label>" +
+        "                                <label for=\"signupPassword2\">Re Password: </label>" +
         "                                <input type=\"password\" id=\"signupPassword2\" placeholder=\"Repeater Contraseña\"/>\n" +
         "                            </div>\n" +
         "                            <div class=\"row\">\n" +
