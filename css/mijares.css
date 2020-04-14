@@ -151,6 +151,10 @@ body {
   padding-right: 2%;
   overflow: hidden;
 }
+.container .content .row .col-8 img, .container #wrapper .row .col-8 img {
+  max-width: 55%;
+  max-height: 55%;
+}
 .container .content .row .col-12-left, .container #wrapper .row .col-12-left {
   width: 40%;
   float: left;
@@ -159,8 +163,8 @@ body {
   overflow: hidden;
 }
 .container .content .row .col-12-left img, .container #wrapper .row .col-12-left img {
-  max-width: 600px;
-  max-height: 600px;
+  max-width: 100%;
+  max-height: 100%;
 }
 .container .content .row .col-12-right, .container #wrapper .row .col-12-right {
   width: 40%;
@@ -170,8 +174,8 @@ body {
   overflow: hidden;
 }
 .container .content .row .col-12-right img, .container #wrapper .row .col-12-right img {
-  max-width: 600px;
-  max-height: 600px;
+  max-width: 100%;
+  max-height: 100%;
 }
 .container .content .row .col-4-left, .container #wrapper .row .col-4-left {
   width: 15%;
@@ -227,23 +231,29 @@ body {
   border: none;
   border-radius: 5px;
   color: white;
-  padding: 8px 20px;
+  padding: 4% 7%;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
 }
 .container .content .row #table-wrapper .addButton, .container #wrapper .row #table-wrapper .addButton {
+  padding: 1% 2%;
   background-color: cornflowerblue;
 }
 .container .content .row #table-wrapper table, .container #wrapper .row #table-wrapper table {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  table-layout: fixed;
+  white-space: nowrap;
 }
 .container .content .row #table-wrapper table td, .container .content .row #table-wrapper table tr, .container #wrapper .row #table-wrapper table td, .container #wrapper .row #table-wrapper table tr {
   border-bottom: 1px solid #ddd;
   padding: 8px;
+}
+.container .content .row #table-wrapper table td, .container #wrapper .row #table-wrapper table td {
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .container .content .row #table-wrapper table tr:hover, .container #wrapper .row #table-wrapper table tr:hover {
   background-color: #f5f5f5;
@@ -255,6 +265,8 @@ body {
   text-align: left;
   background-color: #f5f5f5;
   color: black;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .container .content .row #table-wrapper table .operation .editButton, .container #wrapper .row #table-wrapper table .operation .editButton {
   background-color: blueviolet;
@@ -329,7 +341,7 @@ body {
   border: 3px solid #f1f1f1;
   z-index: 99999;
   width: 60%;
-  padding: 10px;
+  padding: 1%;
   background-color: white;
   overflow-y: scroll;
 }
@@ -344,39 +356,46 @@ body {
   text-align: center;
 }
 .container #loginForm input {
-  padding: 12px 20px;
-  margin: 8px 8px;
+  padding: 2% 4%;
+  margin: 1% 1%;
   border: 1px solid #bcb4ff;
   border-radius: 4px;
-  width: 300px;
+  width: 30%;
 }
 .container #loginForm button, .container #loginForm a {
-  margin-top: 30px;
+  margin-top: 1%;
   background-color: #6059f6;
   border: none;
   border-radius: 5px;
   color: white;
-  padding: 15px 32px;
+  padding: 2% 3%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
 }
+.container #signupForm .row {
+  display: flex;
+  align-items: center;
+}
+.container #signupForm label {
+  width: 30%;
+  margin-right: 5%;
+}
 .container #signupForm input {
-  padding: 12px 20px;
-  margin: 8px 12px;
+  padding: 3% 5%;
+  margin: 1% 1%;
   border: 1px solid #bcb4ff;
   border-radius: 4px;
   width: 50%;
 }
 .container #signupForm button, .container #signupForm a {
-  margin-top: 30px;
-  margin-left: 8px;
+  margin: 2% 3%;
   background-color: #6059f6;
   border: none;
   border-radius: 5px;
   color: white;
-  padding: 15px 32px;
+  padding: 3% 6%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -390,12 +409,11 @@ body {
   align-items: center;
 }
 .container .dashboardForm .row .col-12-label {
-  margin-left: 25%;
   width: 15%;
   float: left;
 }
 .container .dashboardForm .row .col-12-input {
-  width: 50%;
+  width: 75%;
   float: left;
 }
 .container .dashboardForm .row .col-12 {
@@ -403,11 +421,19 @@ body {
   float: left;
 }
 .container .dashboardForm input {
-  padding: 12px 20px;
-  margin: 4px 8px;
+  padding: 2% 4%;
+  margin: 1% 1%;
   border: 1px solid #bcb4ff;
   border-radius: 4px;
-  width: 300px;
+  width: 100%;
+}
+.container .dashboardForm textarea {
+  padding: 2% 4%;
+  margin: 1% 1%;
+  border: 1px solid #bcb4ff;
+  border-radius: 4px;
+  width: 100%;
+  overflow-y: visible;
 }
 .container .dashboardForm button, .container .dashboardForm a {
   margin-top: 20px;

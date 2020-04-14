@@ -16,15 +16,24 @@ function createSignUpHtml() {
         "                    <div class=\"col-12-left\">\n" +
         "                        <form id=\"signupForm\">\n" +
         "                            <div class=\"row\">\n" +
-        "                                <label for=\"signupUsername\"></label><input type=\"text\" id=\"signupUsername\" placeholder=\"Numbre\"/>\n" +
-        "                                <label for=\"correo\"></label><input type=\"text\" id=\"email\" placeholder=\"Correo\"/>\n" +
+        "                                <label for=\"signupUsername\">Username:</label>" +
+        "                                <input type=\"text\" id=\"signupUsername\" placeholder=\"Numbre\"/>\n" +
         "                            </div>\n" +
         "                            <div class=\"row\">\n" +
-        "                                <label for=\"signupPassword\"></label><input type=\"password\" id=\"signupPassword\" placeholder=\"Contraseña\"/>\n" +
-        "                                <label for=\"signupPassword2\"></label><input type=\"password\" id=\"signupPassword2\" placeholder=\"Repeater Contraseña\"/>\n" +
+        "                                <label for=\"correo\">Email:</label>" +
+        "                                <input type=\"text\" id=\"email\" placeholder=\"Correo\"/>\n" +
         "                            </div>\n" +
         "                            <div class=\"row\">\n" +
-        "                                <label for=\"direction\"></label><input type=\"text\" id=\"address\" placeholder=\"Direccion\"/>\n" +
+        "                                <label for=\"signupPassword\">Password: </label>" +
+        "                                <input type=\"password\" id=\"signupPassword\" placeholder=\"Contraseña\"/>\n" +
+        "                            </div>\n" +
+        "                            <div class=\"row\">\n" +
+        "                                <label for=\"signupPassword2\">RepeatPassword: </label>" +
+        "                                <input type=\"password\" id=\"signupPassword2\" placeholder=\"Repeater Contraseña\"/>\n" +
+        "                            </div>\n" +
+        "                            <div class=\"row\">\n" +
+        "                                <label for=\"direction\">Address</label>" +
+        "                                <input type=\"text\" id=\"address\" placeholder=\"Direccion\"/>\n" +
         "                            </div>\n" +
         "                            <div>\n" +
         "                                <button type=\"button\" onclick=\"signup()\">Guardar</button>\n" +
