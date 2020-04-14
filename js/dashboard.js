@@ -100,6 +100,7 @@ function renderTable() {
         url: url,
         type: "GET",
         dataType: "json",
+        async: false,
         success: function (data) {
             currentData = data;
             tableDiv.appendChild(buildHtmlTable(data));
@@ -152,6 +153,9 @@ function submitAddForm() {
         currentData.title = document.getElementById("projectTitle").value;
         currentData.subtitle = document.getElementById("projectSubTitle").value;
         currentData.content = document.getElementById("projectContent").value;
+        let image1Url = document.getElementById("projectImage1").value;
+        let image2Url = document.getElementById("projectImage2").value;
+        currentData.image_url = image1Url + "," + image2Url;
     } else {
         url = '/router.php/equipo';
     }
@@ -162,11 +166,7 @@ function submitAddForm() {
         data: JSON.stringify(currentData),
         dataType: "json",
         success: function (data) {
-            if (data) {
-                renderTable();
-            } else {
-                alert('failed');
-            }
+            renderTable();
         }
     });
     console.log(currentData);
@@ -192,13 +192,19 @@ function openEditForm() {
         document.getElementById("projectTitleEdit").value = currentData.title;
         document.getElementById("projectSubTitleEdit").value = currentData.subtitle;
         document.getElementById("projectContentEdit").value = currentData.content;
+        if(currentData.image_url.match(",")) {
+            let imageUrlList = currentData.image_url.split(",");
+            document.getElementById("projectImage1Edit").value = imageUrlList[0];
+            document.getElementById("projectImage2Edit").value = imageUrlList[1];
+        } else {
+            document.getElementById("projectImage1Edit").value = currentData.image_url;
+        }
     } else {
         document.getElementById("editEquipo").style.display = "block";
     }
 }
 
 function closeEditForm() {
-    currentData = {};
     if (lastTab === "equipo") {
         document.getElementById("editEquipo").style.display = "none";
     } else if (lastTab === "event") {
@@ -230,6 +236,9 @@ function submitEditForm() {
         currentData.title = document.getElementById("projectTitleEdit").value;
         currentData.subtitle = document.getElementById("projectSubTitleEdit").value;
         currentData.content = document.getElementById("projectContentEdit").value;
+        let image1Url = document.getElementById("projectImage1Edit").value;
+        let image2Url = document.getElementById("projectImage2Edit").value;
+        currentData.image_url = image1Url + "," + image2Url;
     } else {
         url = '/router.php/equipo';
     }
@@ -239,12 +248,9 @@ function submitEditForm() {
         type: "PUT",
         data: JSON.stringify(currentData),
         dataType: "json",
+        async: false,
         success: function (data) {
-            if (data) {
-                renderTable();
-            } else {
-                alert('failed');
-            }
+            renderTable();
         }
     });
     console.log(currentData);
@@ -291,11 +297,7 @@ function submitDeleteForm() {
         type: "DELETE",
         dataType: "json",
         success: function (data) {
-            if (data) {
-                renderTable();
-            } else {
-                alert('failed');
-            }
+            renderTable();
         }
     });
     console.log(currentData);

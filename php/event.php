@@ -28,8 +28,6 @@ function putEvent()
     $mysqli = (new database)->connect();
     $json = json_decode(file_get_contents('php://input'));
     $sql = "update event set title = '$json->title',content = '$json->content',faculty_id = '$json->faculty_id',image_url = '$json->image_url' where id = '$json->id';";
-    var_dump($sql);
-    var_dump($json);
     echo $mysqli->query($sql);
 }
 

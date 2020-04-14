@@ -6,6 +6,7 @@ window.onload = function () {
         const rowElement = document.createElement("div");
         rowElement.className = "row";
         rowElement.id = "row" + index;
+        rowElement.style.alignItems="center";
         wrapperElement.appendChild(rowElement);
         {
             const pos = index % 2 ? 'right' : 'left';
@@ -24,6 +25,12 @@ window.onload = function () {
             colElement.innerHTML = '<img src="' + value.image_url + '" alt=""/>';
             rowElement.appendChild(colElement);
         }
+
+        const lineElement = document.createElement("div");
+        lineElement.className = "line";
+        lineElement.style.marginLeft  = "0%";
+        lineElement.style.marginRight = "0%";
+        wrapperElement.appendChild(lineElement);
     });
 };
 

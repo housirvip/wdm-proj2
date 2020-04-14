@@ -28,8 +28,6 @@ function putEquipo()
     $mysqli = (new database)->connect();
     $json = json_decode(file_get_contents('php://input'));
     $sql = "update equipo set name = '$json->name',email = '$json->email',phone = '$json->phone',experience = '$json->experience', avatar = '$json->avatar' where id = '$json->id';";
-    var_dump($sql);
-    var_dump($json);
     echo $mysqli->query($sql);
 }
 

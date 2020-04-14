@@ -137,7 +137,7 @@ body {
   color: #777777;
 }
 .container .content .row, .container #wrapper .row {
-  margin-top: 40px;
+  margin-top: 20px;
   display: flex;
 }
 .container .content .row .col-8, .container #wrapper .row .col-8 {
@@ -152,13 +152,35 @@ body {
   overflow: hidden;
 }
 .container .content .row .col-12-left, .container #wrapper .row .col-12-left {
-  width: 50%;
+  width: 40%;
+  float: left;
+  margin-left: 5%;
+  margin-right: 5%;
+  overflow: hidden;
+}
+.container .content .row .col-12-left img, .container #wrapper .row .col-12-left img {
+  max-width: 600px;
+  max-height: 600px;
+}
+.container .content .row .col-12-right, .container #wrapper .row .col-12-right {
+  width: 40%;
+  float: left;
+  margin-left: 5%;
+  margin-right: 5%;
+  overflow: hidden;
+}
+.container .content .row .col-12-right img, .container #wrapper .row .col-12-right img {
+  max-width: 600px;
+  max-height: 600px;
+}
+.container .content .row .col-4-left, .container #wrapper .row .col-4-left {
+  width: 15%;
   float: left;
   margin-right: 30px;
   overflow: hidden;
 }
-.container .content .row .col-12-right, .container #wrapper .row .col-12-right {
-  width: 50%;
+.container .content .row .col-20-right, .container #wrapper .row .col-20-right {
+  width: 85%;
   float: left;
   margin-left: 30px;
   overflow: hidden;
@@ -284,7 +306,7 @@ body {
   max-height: 15px;
   margin-left: 20px;
 }
-.container .footer .line {
+.container .line {
   margin-top: 90px;
   margin-bottom: 10px;
   border: 0;
@@ -369,7 +391,7 @@ body {
 }
 .container .dashboardForm .row .col-12-label {
   margin-left: 25%;
-  width: 10%;
+  width: 15%;
   float: left;
 }
 .container .dashboardForm .row .col-12-input {
@@ -407,16 +429,15 @@ body {
 }
 .container .oneElementCenter {
   text-align: center;
-  margin-left: 25%;
-  margin-right: 25%;
-  margin-top: 40px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 30px;
 }
 .container .contentBackground {
   background-color: #f5f5ff;
   overflow: hidden;
-  margin-top: 100px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .container #leerMars button {
   margin-top: 30px;

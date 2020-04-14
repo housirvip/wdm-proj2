@@ -28,8 +28,6 @@ function putVideo()
     $mysqli = (new database)->connect();
     $json = json_decode(file_get_contents('php://input'));
     $sql = "update video set author = '$json->author',description = '$json->description',url = '$json->url' where id = '$json->id';";
-    var_dump($sql);
-    var_dump($json);
     echo $mysqli->query($sql);
 }
 
