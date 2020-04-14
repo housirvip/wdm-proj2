@@ -27,7 +27,7 @@ function putProject()
 {
     $mysqli = (new database)->connect();
     $json = json_decode(file_get_contents('php://input'));
-    $sql = "update project set title = '$json->title',subtitle = '$json->subtitle',content = '$json->content',image_url = '$json->image_url';";
+    $sql = "update project set title = '$json->title',subtitle = '$json->subtitle',content = '$json->content',image_url = '$json->image_url' where id = '$json->id';";
     echo $mysqli->query($sql);
 }
 

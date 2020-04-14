@@ -3,12 +3,18 @@ window.onload = function () {
     const data = getProject();
     $.each(data, function (index, value) {
         const wrapperElement = document.getElementById("wrapper");
+
+        const projectElement = document.createElement("div");
+        projectElement.id = "project" + (index+1);
+        projectElement.style.maxHeight = "500px";
+        projectElement.style.overflow = "hidden";
+
         const rowTitleElement = document.createElement("div");
         rowTitleElement.className = "row";
         rowTitleElement.style.marginTop = "1%";
         rowTitleElement.id = "row" + index;
         rowTitleElement.style.alignItems = "center";
-        wrapperElement.appendChild(rowTitleElement);
+        projectElement.appendChild(rowTitleElement);
         {
             const colElement = document.createElement("div");
             colElement.className = "col-4-left";
@@ -29,9 +35,31 @@ window.onload = function () {
         rowContentElement.style.marginTop = "1%";
         rowContentElement.id = "row" + index;
         rowContentElement.style.alignItems = "center";
-        wrapperElement.appendChild(rowContentElement);
+        projectElement.appendChild(rowContentElement);
         rowContentElement.appendChild(index % 2 ? content(index, value) : img(index, value));
         rowContentElement.appendChild(index % 2 ? img(index, value) : content(index, value));
+
+        wrapperElement.appendChild(projectElement);
+
+        if(window.getComputedStyle(projectElement).getPropertyValue('height') === "500px") {
+            leerMarsDiv = document.createElement("div");
+            leerMarsDiv.id = "leerMars";
+            leerMarsButton = document.createElement("button");
+            leerMarsButton.innerText = "Leer Mars";
+            leerMarsButton.onclick = function () {
+                projectElement.style.maxHeight = "10000px";
+                projectElement.style.overflow = "visible";
+                wrapperElement.removeChild(leerMarsDiv);
+            };
+            leerMarsDiv.appendChild(leerMarsButton);
+
+            const leerMarsText = document.createElement("p3");
+            leerMarsText.innerText = " <- You can click it to read full information!";
+            leerMarsText.style.fontStyle = "italic";
+            leerMarsDiv.appendChild(leerMarsText);
+
+            wrapperElement.appendChild(leerMarsDiv);
+        }
 
         const lineElement = document.createElement("div");
         lineElement.className = "line";
