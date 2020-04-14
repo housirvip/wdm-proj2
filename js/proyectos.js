@@ -5,6 +5,7 @@ window.onload = function () {
         const wrapperElement = document.getElementById("wrapper");
         const rowTitleElement = document.createElement("div");
         rowTitleElement.className = "row";
+        rowTitleElement.style.marginTop = "1%";
         rowTitleElement.id = "row" + index;
         rowTitleElement.style.alignItems = "center";
         wrapperElement.appendChild(rowTitleElement);
@@ -25,6 +26,7 @@ window.onload = function () {
 
         const rowContentElement = document.createElement("div");
         rowContentElement.className = "row";
+        rowContentElement.style.marginTop = "1%";
         rowContentElement.id = "row" + index;
         rowContentElement.style.alignItems = "center";
         wrapperElement.appendChild(rowContentElement);
@@ -35,6 +37,8 @@ window.onload = function () {
         lineElement.className = "line";
         lineElement.style.marginLeft  = "0%";
         lineElement.style.marginRight = "0%";
+        lineElement.style.marginTop = "1%";
+        lineElement.style.marginBottom = "1%";
         wrapperElement.appendChild(lineElement);
     });
 };

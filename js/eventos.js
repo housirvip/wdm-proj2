@@ -14,7 +14,7 @@ window.onload = function () {
             colElement.className = 'col-12-' + pos;
             // colElement.style.textAlign = "center";
             let content = value.content.replace(/\r\n/g, '<br>');
-            colElement.innerHTML = "<h2>" + value.title + "</h2><p>" + content + "</p>";
+            colElement.innerHTML = "<h2><p3>Event " + (index+1) + " : </p3>" + value.title + "</h2><p>" + content + "</p>";
             rowElement.appendChild(colElement);
         }
         {
@@ -30,6 +30,8 @@ window.onload = function () {
         lineElement.className = "line";
         lineElement.style.marginLeft  = "0%";
         lineElement.style.marginRight = "0%";
+        lineElement.style.marginTop = "1%";
+        lineElement.style.marginBottom = "1%";
         wrapperElement.appendChild(lineElement);
     });
 };

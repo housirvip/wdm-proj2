@@ -40,6 +40,8 @@ body {
 .container h2 {
   font-size: 40px;
   font-weight: 700;
+  margin-top: 1%;
+  margin-bottom: 1%;
   color: #000000;
 }
 .container h3 {
@@ -163,8 +165,8 @@ body {
   overflow: hidden;
 }
 .container .content .row .col-12-left img, .container #wrapper .row .col-12-left img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 80%;
+  max-height: 80%;
 }
 .container .content .row .col-12-right, .container #wrapper .row .col-12-right {
   width: 40%;
@@ -174,8 +176,8 @@ body {
   overflow: hidden;
 }
 .container .content .row .col-12-right img, .container #wrapper .row .col-12-right img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 80%;
+  max-height: 80%;
 }
 .container .content .row .col-4-left, .container #wrapper .row .col-4-left {
   width: 15%;
