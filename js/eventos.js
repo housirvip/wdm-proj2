@@ -12,7 +12,7 @@ window.onload = function () {
         const rowElement = document.createElement("div");
         rowElement.className = "row";
         rowElement.id = "row" + index;
-        rowElement.style.alignItems="center";
+        // rowElement.style.alignItems="center";
         eventElement.appendChild(rowElement);
         {
             const pos = index % 2 ? 'right' : 'left';
