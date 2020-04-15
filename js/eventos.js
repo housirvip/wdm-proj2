@@ -37,6 +37,7 @@ window.onload = function () {
         if(window.getComputedStyle(eventElement).getPropertyValue('height') === "500px") {
             leerMarsDiv = document.createElement("div");
             leerMarsDiv.id = "leerMars";
+            leerMarsDiv.className = "oneElementCenter";
             leerMarsButton = document.createElement("button");
             leerMarsButton.innerText = "Leer Mars";
             leerMarsButton.onclick = function () {
