@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    <link rel="stylesheet" type="text/css" href="../../sass/app.scss"/>
     <title>Mijares - @yield('title')</title>
     <link rel="stylesheet" href="css/app.css">
     {{--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"--}}
@@ -76,6 +77,23 @@
 <div class="container">
     @yield('content')
 </div>
+<footer class="footer">
+    <div class="container">
+        <div class="line"></div>
+        <div class="row">
+            <div class="col-md-10">
+                Copyright ©2020 All rights reserved | This template is made with <p3>❤</p3> by <p3>DiazApps</p3>
+            </div>
+            <div class="col-md-2">
+                <img src="images/facebook.png" alt=""/>
+                <img src="images/twitter.png" alt=""/>
+                <img src="images/dribbble.png" alt=""/>
+                <img src="images/behance.png" alt=""/>
+            </div>
+        </div>
+{{--        <span class="text-muted">Place sticky footer content here.</span>--}}
+    </div>
+</footer>
 <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>

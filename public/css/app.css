@@ -10933,3 +10933,41 @@ body #navbar a.active {
   color: #6059f6;
 }
 
+body .container {
+  margin-top: 3%;
+}
+
+body .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  line-height: 60px;
+  background-color: #04091e;
+  color: #878787;
+}
+
+body .footer .line {
+  margin-top: 90px;
+  border: 0;
+  background-color: #333333;
+  height: 1px;
+  cursor: pointer;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+body .footer img {
+  max-width: 15px;
+  max-height: 15px;
+  margin-left: 20px;
+}
+
+body .footer .anchor {
+  color: #6059f6;
+}
+
+body .footer p3 {
+  color: #6059f6;
+}
+
