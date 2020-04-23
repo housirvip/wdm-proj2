@@ -1,0 +1,227 @@
+﻿font
+
+font-family: Roboto
+font-size: 15px
+font-weight: 400
+line-height: 1.667
+
+color para las h1 #6059f6, h2,h3 #000000
+color para las p #888888
+
+footer
+
+ background color: #04091e
+text color #888888
+
+anchor color #6059f6
+
+
+button
+
+ background-color: #6059f6
+color text: #fff
+-------------------------------------------------------------------------------
+
+Page Text
+
+inicio
+
+CENTRO AUGUSTO MIJARES​
+DESARROLLO HUMANO SUSTENTABLE
+
+BIENVENIDA
+Bienvenidos a este espacio del Centro Augusto Mijares, Asociación Civil sin fines de lucro centrada en el tema de la Responsabilidad Social, con énfasis en la realidad venezolana. En esta página encontrarás información alusiva al epónimo, Augusto Mijares, su trayectoria profesional, sus aportes en el campo específico de la educación y sus obras. También podrás conocer sobre el Centro: misión, valores, líneas de trabajo, proyectos en ejecución y actividades realizadas. Además, esta página web cuenta con enlaces directos para comunicarte vía mensajería con los integrantes del Centro, buscar información sobre temas específicos, acceder a una lista de blogs sobre la responsabilidad social y ubicar otras instituciones interesadas por el tema de la responsabilidad social. Con esta página web, esperamos unirnos al grupo de personas que, tanto en Venezuela como en otras partes del mundo, están aportando sus ideas en pro de un desarrollo humano sustentable.
+
+
+PROPÓSITO
+El Centro Augusto Mijares está conformado por un grupo de profesionales que asesoran en la ejecución de proyecto enmarcados en el tema de la Responsabilidad Social - Desarrollo Humano Sustentable. Actualmente, no cuenta con una página web para la difusión de su labor y producción. De allí que haya optado por colaborar con esta institución, elaborando este espacio web que funcionará como medio de interacción con el público en general. Concretamente, el propósito es dar respuesta a esta carencia que afecta el establecimiento de una comunicación más efectiva, en atención a la incidencia que, actualmente, tienen las TIC en todos los ámbitos de las relaciones humanas. Además, se espera que este medio constituya un enlace para establecer alianzas y generar, de manera colaborativa, nuevas propuestas para la elaboración de futuros proyectos en ámbitos diversos, como el ambiente, el turismo, la gerencia empresarial, la educación universitaria, entre otros.
+
+OBJETIVOS
+1. Funcionar como punto de información en el tema de la Responsabilidad Social.
+2. Establecer alianzas en línea para la realización de actividades en por del desarrollo humano ustentable.
+3. Dar a conocer los trabajos realizados, en el campo de la Responsabilidad Social - Desarrollo Sustentable, por los miembros del Centro Augusto Mijares y otras personas interesadas en el tema.
+4. Funcionar como un centro de información para la reflexión sobre el tema de la Responsabilidad Social.
+Nota en el punto objetivos se uso ula lista esto no se hizo a mano.
+
+enlace de video
+https://youtu.be/Kcl-T98Wtvo
+----------------------------------------------------------------------------
+semblanza
+
+Augusto Mijares nació en Villa de Cura (estado Anzoátegui) el 12 de noviembre de 1987, pero desde muy joven se residenció en la ciudad de Caracas. Se graduó de Abogado en la Universidad Central de Venezuela (UCV) en 1921 y también de Profesor en Geografía e Historia el año 1938.
+De las dos carreras en la que se tituló, Mijares mostró predilección por la de docente, inicándose como maestro de aula a los dicisiete años. En este quehacer no solo se destacó por su práctica pedagógica, sino también por sus aportes en las reformas de los programas de enseñanza, creación de las escuelas y los cargos meritorios que ocupó en el sistema educativo, siendo de gran reconocimiento su participación como Ministro de Educación en 1948.
+Este insigne educador, también fue un escritor destacado. En 1964 escribió su obra El Libertador, considerada una de las mejores bioigrafías sobre Simón Bolívar.
+Augusto Mijares, hoy día, sigue inspirando a muchos profesionales, especialmente a docentes, que ejerciendo los valores de la "justicia, el bien, la belleza y la verdad", apuestn por un aprendizaje que contribuya a potenciar las capacidades del estudiante y el docente, en plena sintonía con las necesidades y características socio-culturales de la sociedad donde tiene lugar el hecho esducativo.
+
+
+APORTES PEDAGÓICOS DE AUGUSTO MIJARES
+
+Formación en valores para construir el futuro del país.
+
+Para formar en valores es necesario llegar a la dimensión “afectiva” del ser humano.
+
+Educar en virtudes e integrar la afectividad y la razón.
+
+La educación moral es una educación sentimental, actuar virtuosamente es actuar desde una inclinación formada por el cultivo de las virtudes cívicas como la constancia y la probidad.
+
+Integrar lo afirmativo venezolano en la educación.
+
+Obras
+Augusto Mijares fue considerado como uno de los ensayistas más destacados del siglo XXI. Esta ha sido su obra:
+
+La patria de los venezolanos (1750)
+
+La interpretación pesimista de la sociología hispanoamericana(1938)
+
+Hombres e ideas de América (1940)
+
+Educación (1943)
+
+La luz y el espejo (1955)
+
+La ideología de revolución emancipadora (1961)
+
+Lo afirmativo venezolano (1963)
+
+El Libertador ( 1964)
+
+La evolución política de Venezuela (1967)
+
+Longitud y latitud (1971)
+
+Copyright ©2020 All rights reserved | This template is made with  by DiazApps
+
+Nota; en APORTES PEDAGÓICOS DE AUGUSTO MIJARES y OBRAS se usaron etiquetas de listas para estos pundos
+
+-------------------------------------------------------------------
+centro augusto mijares
+
+MISIÓN
+El CENTRO AUGUSTO MIJARES es una asociación civil sin fines de lucro que contribuye con el desarrollo humano, mediante la generación y difusión de información, la formación extraescolar, promoviendo educación de calidad, asistencia técnica para mejorar el desempeño de organizaciones y el impulso de iniciativas de responsabilidad social y voluntariado, con el propósito de lograr la formación de capital social y el desarrollo sustentable de la comunidad.
+
+VISIÓN
+El CENTRO AUGUSTO MIJARES aspira ser reconocido, a nivel nacional, como una organización de excelencia, comprometida con el desarrollo sustentable de la comunidad.
+
+
+VALORES
+Dentro de nuestro pensamiento estratégico, los Valores son el verdadero poder: nos ayudan a aclarar nuestra Misión como organización y como personas; purifican e inspiran nuestra Visión y nos impulsan en cada actividad del desempeño organizacional.
+Inspirados en el pensamiento del Profesor Augusto Mijares, asumimos como nuestros los ideales de Justicia, el Bien, la Belleza y la Verdad; y los valores de RESPONSABILIDAD SOCIAL, SOLIDARIDAD, CONSTANCIA, CORRESPONSABILIDAD, LIBERTAD, Y FRATERNIDAD.
+
+RESPONSABILIDAD SOCIAL
+Estimulamos una actitud madura, consciente y sensible a los problemas de nuestra sociedad, a la vez que adoptamos hábitos, formulamos estrategias y desarrollamos procesos que nos ayudan a minimizar los impactos negativos que podamos generar en el medio ambiente y en la sociedad.
+
+FRATERNIDAD
+Promovemos la unión, tolerancia y respeto a las diferencias entre los miembros que conforman una sociedad, conviviendo y actuando unidos en pos del bien común, y compartiendo sus experiencias de vida.
+
+LIBERTAD
+La asumimos como la capacidad de elegir responsablemente la dirección de nuestras vidas. Implica el conocer y diferenciar entre el bien y el mal y proceder de acuerdo a nuestra conciencia, creencias y aspiraciones.
+
+CORRESPONSABILIDAD
+Participamos conjuntamente con empresas, instituciones, organizaciones e individuos para impulsar iniciativas en pro del desarrollo humano y del desarrollo sustentable de la comunidad.
+
+SOLIDARIDAD
+Actuamos desinteresadamente y con plena de alegría en favor de otras personas, teniendo en cuenta la utilidad y la necesidad del aporte para estas personas.
+
+CONSTANCIA
+Tenemos perseverancia y hacemos esfuerzo constante para alcanzar nuestros objetivos y metas. Comenzamos una y otra vez para corregir errores y superar obstáculos. Se asume lo dicho por Simón Bolívar en el Manifiesto de Cartagena: “(…) el valor, la habilidad y la constancia corrigen la mala fortuna” - Citado por Augusto Mijares en la obra El Libertador.
+
+----------------------------------------------------------------------------------------------------
+proyectos
+
+
+RESPONSABILIDAD SOCIAL UNIVERSITARIA​ Y DESARROLLO SUSTENTABLE ¿QUÉ Y PARA QUÉ?
+
+Por el Centro AuguSto Mijares: Mgtr. Tamara Malaver
+El Centro Agusto Mijares considera pertinente tratar el tema de la Responsabilidad Social- Desarrollo Humano Sustentable en el sistema educativo universitario, a partir de los aportes que la Organización de las Naciones Unidas (ONU) ha hecho sobre este asunto. En tal sentido, cree necesario centrar su acción teniendo en cuenta los Principios ONU Gestión Responsable de la Educación Universitaria en los cuales se expone lo siguiente:
+Propósito: Desarrollar en los estudiantes las capacidades para la sostenibilidad, agregar valor a las empresas y la sociedad en general y trabajar por un economía incluyente y sostenible.
+Valores: Incorporar en las actividades académicas y los programas, los valores de la responsabilidad social y el desarrollo sostenible.
+Métodos: Crear Proyectos Educativos, materiales, procesos y entornos que permitan experiencias de aprendizaje eficaz para el liderazgo responsable
+
+Investigación: Realizar investigación para comprender el impacto de las empresas y las organizaciones en la creación de sostenibilidad social y ambiental y valor económico.
+Asociación: Interactuar con los actores sociales para asumir los desafíos de la comunidad y sus organizaciones en materia de responsabilidad social y ambiental.
+Diálogo: Promover el diálogo y debate de todas las partes interesadas sobre cuestiones criticas relacionadas con sostenibilidad y responsabilidad social. Teniendo en cuenta estos principios, una posibilidad de implicar la responsabilidad social en la universidad es a través del Servicio Comunitario. El propósito es que esta actividad sea un punto de partida para la gestión y desarrollo de proyectos que vaya en mejora de la calidad de vida del ciudadano dentro de la universidad y en la sociedad donde este hace vida.Actualmente, el Centro Augusto Mijares tiene en marcha una Propuesta de Responsabilidad Social – Desarrollo Humano Sustentable en la Universidad de Oriente. La ejecución de este proyecto sería una oportunidad clave para llevar a la práctica el lema “Del pueblo venimos / hacia el pueblo vamos” que sirve de norte a esta Casa de Estudios Superiores.
+
+Leer Mas
+
+----------------------------------------------------------------
+
+eventos
+
+MAESTRÍA EN GERENCIA DEL TURISMO SOSTENIBLE
+El Programa de Postrado Maestría en Gerencia del Turismo Sostenible es una oportunidad de formación y actualización profesional para el desarrollo del turismo en el Siglo XXI. El Programa está integrado por las siguientes unidades curriculares: Legislación Turística, Patrimonio Natural y Cultural, Mercadeo Turístico Sostenible, Promoción del Turismo Sostenible, Formulación y Evaluación de Proyectos de Turismo Sostenible, Comercialización y Venta de Productos Turísticos Sostenibles, Legislación ambiental, Educación Ambiental, Economía Ambiental, Planificación del Desarrollo Turístico Sostenible, Turismo Sostenible y participación comunitaria. Las líneas de investigación y generación de conocimiento de este programa son: Turismo y Medioambiente; Planificación del Desarrollo Turístico Sostenible; Patrimonio Cultural; Calidad y Certificación de la Sostenibilidad Turística; Gestión de los Recursos Humanos en Empresas Turísticas. Requisitos Académicos: Título Universitario de Pregrado Localidad: Isla de Margarita
+
+Los Interesados deben enviar sus datos a :
+
+Dr. Rafael Torrealba (ULAC) No. Teléf. 0414-4650138 . Correo: raftor535@hotmail.com
+Tamara Malaver (Centro Augusto Mijares) No. Télef. 0426-5864477.
+Correo: tamaramalaver@gmail.com; centroaugustomijares@gmail.com
+
+Programa de Postgrado aprobado por el Consejo Nacional de Universidades (CNU): Resolución 063, Publicada en Gaceta Oficial No.38.651 del 23 03 2007
+
+Se reciben preinscripciones hasta el 15/04/2016
+
+Saludos, gracias por difundir esta oferta académica y contribuir así con el desarrollo humano de nuestra gente.
+
+----------------------------------------------------------------
+videos
+
+UN ESPACIO PARA DEBATIR A PARTIR DEL VÍDEO
+
+enlaces
+
+https://youtu.be/44E6zSpaDwE
+
+Dr. François Vallaeys
+La Responsabilidad Social por François Vallaeys | Universidad Siglo 21 URL: https://www.youtube.com/watch?v=44E6zSpaDwE
+
+https://youtu.be/do9dIcEIiwU
+Dr. François Vallaeys
+Panorama de la RSO en América Latina (SIRSO 2014)III SIMPOSIO DE LA RESPONSABILIDAD SOCIAL DE LAS ORGANIZACIONES URL: https://www.youtube.com/watch?v=do9dIcEIiwU
+
+https://youtu.be/h4juTFzNYcs
+UNIVERSIDAD DEL PACÍFICO​
+CONFERENCIA: Responsabilidad Socialersitaria como modelo universitario para América Latina URL: https://www.youtube.com/watch?v=h4juTFzNYcs
+
+https://youtu.be/W7y83cZ_s7g
+Dr. Francois Vallaeys
+Conferencia: CALIDAD EDUCATIVA Y RESPONSABILIDAD SOCIAL -Congreso Internacional de Calidad Educativa URL: https://www.youtube.com/watch?v=W7y83cZ_s7g
+
+---------------------------------------------------------------------------
+equipo
+
+SOMOS UN EQUIPO INTERDISCIPLINARIO
+
+ALEX RODRÍGUEZ D.
+Lic. en Administración, Magister en Turismo, Mención Mercadeo Turístico; Experiencia como docente universitario y promotor de emprendedores.
+Teléf.: 0416-5971407
+E-mail: arcaro0460@hotmail.com
+
+GISELA QUINTERO B.
+Psicólogo amplia experiencia en desarrollo organizacional, gestión y desarrollo de talento humano en instituciones públicas y empresas privadas.
+Teléf.: 0416-8969824
+E-mail: gigiqb@gmail.com
+
+JUDITH P. ALVARADO J.
+Maestra, Actriz, Directora, Autora de Textos Teatrales, Maestra de Actuación, Teatrista.
+Teléf.: 0416-1949369
+E-mail: juditha.alvarado@gmail.com
+
+
+
+MARÍA AUGUSTA BERROTERÁN
+Lic. en Hotelería, Magister en Gerencia Ambiental, experiencia en hotelería, turismo y educación ambiental.
+Teléf.: 0416-4957513
+E-mail: mariaberroteranmaluenga@gmail.com
+
+
+TAMARA MALAVER
+Lic. en Relaciones Industriales, Magister en Gerencia de Empresas, Egresada del V Programa PNUD de Formación en Responsabilidad Social Empresarial; experiencia en desarrollo organizacional, gestión humana, docencia y promoción de proyectos comunitarias.
+Teléf.: 0426-5864477
+E-mail: tamaramalaver@gmail.com
+
+
+TERESITA GONZÁLEZ
+Lic. en Sociología, Magister en Educación, amplia experiencia en educación de nivel medio y universitaria, promotora de la estrategia pedagógica: Filosofía para Niños
+Teléf.: 0412-0960917
+E-mail: teresitadelacruz@gmail.com
+
