@@ -27,6 +27,25 @@ body h6 {
   font-family: Rajdhani, sans-serif;
 }
 
+body h1 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #6059f6;
+}
+
+body h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  color: #000000;
+}
+
+body h3 {
+  font-size: 20px;
+  color: #000000;
+}
+
 body #navbar {
   padding-left: 10%;
   padding-right: 10%;
@@ -100,5 +119,13 @@ body .footer .anchor {
 
 body .footer p3 {
   color: #6059f6;
+}
+
+body .oneElementCenter {
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 
