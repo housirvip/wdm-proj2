@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Eventos')
+
 @section('navbar')
     @parent
 @endsection
