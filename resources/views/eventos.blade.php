@@ -7,5 +7,7 @@
 @endsection
 
 @section('content')
-    <p>{{$event}}</p>
+    <div class="content">
+        <p>{{$event}}</p>
+    </div>
 @endsection

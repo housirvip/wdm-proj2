@@ -1,50 +1,59 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito");
-@import url("https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-body {
+@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700&display=swap);@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap);@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);body {
   font-family: Roboto, sans-serif;
   font-size: 15px;
 }
+
 body h1 {
   font-family: Rajdhani, sans-serif;
 }
+
 body h2 {
   font-family: Rajdhani, sans-serif;
 }
+
 body h3 {
   font-family: Rajdhani, sans-serif;
 }
+
 body h4 {
   font-family: Rajdhani, sans-serif;
 }
+
 body h5 {
   font-family: Rajdhani, sans-serif;
 }
+
 body h6 {
   font-family: Rajdhani, sans-serif;
 }
+
 body #navbar {
   padding-left: 10%;
   padding-right: 10%;
   background-color: #2f3742;
 }
+
 body #navbar a {
   font-weight: 700;
   text-decoration: none;
 }
+
 body #navbar a:link {
   color: #000033;
 }
+
 body #navbar a:visited {
   color: #000033;
 }
+
 body #navbar a:hover {
   color: #6059f6;
 }
+
 body #navbar a.active {
   color: #6059f6;
 }
+
 body .container-fluid {
   position: absolute;
   margin-top: 3%;
@@ -53,11 +62,14 @@ body .container-fluid {
   font-size: 15px;
   font-weight: 400;
 }
-body .content, body #wrapper {
+
+body .content,
+body #wrapper {
   margin-left: 10%;
   margin-right: 10%;
   color: #777777;
 }
+
 body .footer {
   position: fixed;
   bottom: 0;
@@ -67,6 +79,7 @@ body .footer {
   color: #878787;
   font-style: italic;
 }
+
 body .footer .line {
   margin-top: 10%;
   border: 0;
@@ -74,16 +87,18 @@ body .footer .line {
   height: 1px;
   cursor: pointer;
 }
+
 body .footer img {
   max-width: 15px;
   max-height: 15px;
   margin-left: 20px;
 }
+
 body .footer .anchor {
   color: #6059f6;
 }
+
 body .footer p3 {
   color: #6059f6;
 }
 
-/*# sourceMappingURL=mijares.css.map */

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
+@include('partials.login')
+@include('partials.register')
 @section('navbar')
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
         <img src="{{ asset('images/logo.png') }}" alt="">
@@ -42,6 +44,16 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Equipo</a>
                 </li>
+                @guest
+                    <li class="nav-item">
+                        {{--                    <a class="nav-link" href="{{ route('login') }}">Inicio De Sesion</a>--}}
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Inicio De Sesion</a>
+                    </li>
+                    <li class="nav-item">
+                        {{--                    <a class="nav-link" href="{{ route('register') }}">Registro</a>--}}
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#registerModal">Registro</a>
+                    </li>
+                @endguest
             </ul>
             @auth
                 <div class="nav-item dropdown">
@@ -62,18 +74,10 @@
                     </div>
                 </div>
             @endauth
-            @guest
-                <div class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">Login</a>
-                </div>
-                <div class="nav-item">
-                    <a class="nav-link" href="{{ route('register') }}">Register</a>
-                </div>
-            @endguest
         </div>
     </nav>
 @show
-<div class="container">
+<div class="container-fluid">
     @yield('content')
 </div>
 <footer class="footer">
@@ -93,12 +97,14 @@
                 <img src="{{ asset('images/behance.png') }}" alt=""/>
             </div>
         </div>
-        {{--        <span class="text-muted">Place sticky footer content here.</span>--}}
     </div>
-</footer>
+<div/>
 <script type="text/javascript" src="{{ asset('js/mijares.js') }}"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+{{--<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>--}}
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+@yield('loginCheck')
+@yield('registerCheck')
 </body>
 </html>
