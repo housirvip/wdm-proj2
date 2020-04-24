@@ -31,7 +31,7 @@
                     @endif
                 </div>
                 <div class="col-lg-6">
-                    <h2>{{$project->subtitle}}</h2>
+                    <h3>{{$project->subtitle}}</h3>
                     <p>
                         {{$project->content}}
                     </p>
