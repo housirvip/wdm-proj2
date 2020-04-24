@@ -43,7 +43,22 @@ body h2 {
 
 body h3 {
   font-size: 20px;
+  font-weight: 900;
   color: #000000;
+}
+
+body p1 {
+  font-weight: 900;
+}
+
+body p2 {
+  font-size: 20px;
+  font-weight: 900;
+  color: #000000;
+}
+
+body p3 {
+  color: #6059F6;
 }
 
 body #navbar {
@@ -73,10 +88,8 @@ body #navbar a.active {
   color: #6059f6;
 }
 
-body .container-fluid {
-  position: absolute;
+body .container-mijares {
   margin-top: 3%;
-  margin-bottom: 3%;
   font-family: Roboto, sans-serif;
   font-size: 15px;
   font-weight: 400;
@@ -89,36 +102,30 @@ body #wrapper {
   color: #777777;
 }
 
-body .footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  line-height: 60px;
+body #footer {
+  height: 150px;
   background-color: #04091e;
   color: #878787;
   font-style: italic;
 }
 
-body .footer .line {
-  margin-top: 10%;
+body #footer .anchor {
+  color: #6059f6;
+}
+
+body #footer p3 {
+  color: #6059f6;
+}
+
+body .line {
+  margin-top: 90px;
+  margin-bottom: 10px;
   border: 0;
-  background-color: #333333;
+  background-color: white;
   height: 1px;
   cursor: pointer;
-}
-
-body .footer img {
-  max-width: 15px;
-  max-height: 15px;
-  margin-left: 20px;
-}
-
-body .footer .anchor {
-  color: #6059f6;
-}
-
-body .footer p3 {
-  color: #6059f6;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 body .oneElementCenter {
@@ -127,5 +134,12 @@ body .oneElementCenter {
   margin-right: 20%;
   margin-top: 3%;
   margin-bottom: 3%;
+}
+
+body .contentBackground {
+  background-color: #f5f5ff;
+  overflow: hidden;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 

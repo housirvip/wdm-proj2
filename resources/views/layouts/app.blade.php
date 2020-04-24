@@ -21,13 +21,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home') }}">Inicio <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{ route('index') }}">Inicio <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Semblanza</a>
+                    <a class="nav-link" href="{{ route('semblanza') }}">Semblanza</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Centro Augusto Mijares</a>
+                    <a class="nav-link" href="{{ route('cam') }}">Centro Augusto Mijares</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Proyectos</a>
@@ -77,24 +77,24 @@
         </div>
     </nav>
 @show
-<div class="container-fluid">
+<div class="container-mijares">
     @yield('content')
 </div>
-<footer class="footer">
+<footer id="footer">
     <div class="container">
-        <div class="line"></div>
         <div class="row">
-            <div class="col-md-10">
+            <br>
+            <br>
+        </div>
+        <div class="row">
+            <div class="col-lg-8" style="text-align: center">
                 Copyright ©2020 All rights reserved | This template is made with
                 <p3>❤</p3>
                 by
                 <p3>DiazApps</p3>
             </div>
-            <div class="col-md-2">
-                <img src="{{ asset('images/facebook.png') }}" alt=""/>
-                <img src="{{ asset('images/twitter.png') }}" alt=""/>
-                <img src="{{ asset('images/dribbble.png') }}" alt=""/>
-                <img src="{{ asset('images/behance.png') }}" alt=""/>
+            <div class="col-lg-4" style="text-align: center">
+                <img src="{{ asset('images/footer-icon.png') }}" alt=""/>
             </div>
         </div>
     </div>

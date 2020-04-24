@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/index', 'IndexController@index')->name('index');
 Route::get('/event', 'EventController@index')->name('event');
-
+Route::get('/semblanza', 'SemblanzaController@index')->name('semblanza');
+Route::get('/cam', 'CAMController@index')->name('cam');
 Auth::routes();
