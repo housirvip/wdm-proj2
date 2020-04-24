@@ -74,7 +74,7 @@ body #navbar a.active {
   color: #6059f6;
 }
 body .container-mijares {
-  margin-top: 3%;
+  margin-top: 1%;
   font-family: Roboto, sans-serif;
   font-size: 15px;
   font-weight: 400;
@@ -118,6 +118,22 @@ body .contentBackground {
   overflow: hidden;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+body .leerMars {
+  text-align: center;
+}
+body .leerMars button {
+  margin-top: 3%;
+  margin-left: 5%;
+  background-color: #6059f6;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=mijares.css.map */

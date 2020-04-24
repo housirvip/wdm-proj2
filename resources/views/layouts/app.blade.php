@@ -30,19 +30,19 @@
                     <a class="nav-link" href="{{ route('cam') }}">Centro Augusto Mijares</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Proyectos</a>
+                    <a class="nav-link" href="{{ route('project')}}">Proyectos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('event') }}">Eventos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Videos</a>
+                    <a class="nav-link" href="{{ route('video') }}">Videos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Equipo</a>
+                    <a class="nav-link" href="{{ route('equipo') }}">Equipo</a>
                 </li>
                 @guest
                     <li class="nav-item">

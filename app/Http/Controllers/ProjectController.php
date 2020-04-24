@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class EventController extends Controller
+class ProjectController extends Controller
 {
     /**
      * Handle the incoming request.
@@ -19,7 +19,7 @@ class EventController extends Controller
 
     public function index()
     {
-        $events = \App\Event::all();
-        return view('eventos',['events' => $events]);
+        $projects = \App\Project::all();
+        return view('proyectos',['projects' => $projects]);
     }
 }

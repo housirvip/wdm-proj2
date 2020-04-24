@@ -19,4 +19,7 @@ Route::get('/index', 'IndexController@index')->name('index');
 Route::get('/event', 'EventController@index')->name('event');
 Route::get('/semblanza', 'SemblanzaController@index')->name('semblanza');
 Route::get('/cam', 'CAMController@index')->name('cam');
+Route::get('/project', 'ProjectController@index')->name('project');
+Route::get('/video', 'VideoController@index')->name('video');
+Route::get('/equipo', 'EquipoController@index')->name('equipo');
 Auth::routes();
