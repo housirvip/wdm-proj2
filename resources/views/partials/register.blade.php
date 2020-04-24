@@ -33,7 +33,9 @@
 
                         <div class="col-md-6">
                             <input id="emailInput" type="email" class="form-control" name="email" value="{{ old('email') }}" required autocomplete="email">
-
+                            <span>
+                                * We will send email to you
+                            </span>
                             <span class="invalid-feedback" role="alert" id="emailError">
                                 <strong></strong>
                             </span>
@@ -45,7 +47,6 @@
 
                         <div class="col-md-6">
                             <input id="passwordInput" type="password" class="form-control" name="password" required autocomplete="new-password">
-
                             <span class="invalid-feedback" role="alert" id="passwordError">
                                 <strong></strong>
                             </span>

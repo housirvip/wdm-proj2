@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Http;
 
 class RegisterController extends Controller
 {
@@ -64,6 +65,9 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $url = 'http://35.193.61.114:6062/email/send?address='.$data['email'].'&username='.$data['name'];
+        $response = Http::get($url);
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
