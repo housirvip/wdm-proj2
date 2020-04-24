@@ -5,19 +5,19 @@
 @section('content')
     <div class="content">
         <div class="row">
-            <div class="col-sm">
+            <div class="col-sm-6">
                 <p1>Augusto Mijares</p1> nació en Villa de Cura (estado Anzoátegui) el 12 de noviembre de 1987, pero desde muy joven se residenció en la ciudad de Caracas. Se graduó de Abogado en la Universidad Central de Venezuela (UCV) en 1921 y también de Profesor en Geografía e Historia el año 1938.
                 De las dos carreras en la que se tituló, Mijares mostró predilección por la de docente, inicándose como maestro de aula a los dicisiete años. En este quehacer no solo se destacó por su práctica pedagógica, sino también por sus aportes en las reformas de los programas de enseñanza, creación de las escuelas y los cargos meritorios que ocupó en el sistema educativo, siendo de gran reconocimiento su participación como Ministro de Educación en 1948.
                 Este insigne educador, también fue un escritor destacado. En 1964 escribió su obra El Libertador, considerada una de las mejores bioigrafías sobre Simón Bolívar.
                 Augusto Mijares, hoy día, sigue inspirando a muchos profesionales, especialmente a docentes, que ejerciendo los valores de la "justicia, el bien, la belleza y la verdad", apuestn por un aprendizaje que contribuya a potenciar las capacidades del estudiante y el docente, en plena sintonía con las necesidades y características socio-culturales de la sociedad donde tiene lugar el hecho esducativo.
             </div>
             <div class="col-sm-6">
-                <img src="images/Augusto_Mijares.jpg" style="height: 500px"/>
+                <img src="images/Augusto_Mijares.jpg" style="max-height: 80%"/>
             </div>
         </div>
         <br>
         <div class="row" style="align-items: center">
-            <div class="col-sm">
+            <div class="col-sm-6">
                 <p2>APORTES PEDAGÓICOS DE AUGUSTO MIJARES</p2>
                 <ol>
                     <li>Formación en valores para construir el futuro del país.</li>
