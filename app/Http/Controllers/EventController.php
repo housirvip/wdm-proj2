@@ -22,4 +22,9 @@ class EventController extends Controller
         $events = \App\Event::all();
         return view('eventos',['events' => $events]);
     }
+
+    public function get()
+    {
+        return \App\Event::all();
+    }
 }

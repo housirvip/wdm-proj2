@@ -22,4 +22,9 @@ class VideoController extends Controller
         $videos = \App\Video::all();
         return view('videos',['videos' => $videos]);
     }
+
+    public function get()
+    {
+        return \App\Video::all();
+    }
 }

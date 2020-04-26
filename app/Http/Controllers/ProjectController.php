@@ -22,4 +22,9 @@ class ProjectController extends Controller
         $projects = \App\Project::all();
         return view('proyectos',['projects' => $projects]);
     }
+
+    public function get()
+    {
+        return \App\Project::all();
+    }
 }

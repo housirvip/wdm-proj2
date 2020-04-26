@@ -80,7 +80,7 @@
     @parent
 
     @if($errors->has('email') || $errors->has('password'))
-        <script>
+        <script type="text/javascript">
             $(function() {
                 $('#loginModal').modal({
                     show: true

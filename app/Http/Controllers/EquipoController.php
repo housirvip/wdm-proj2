@@ -20,6 +20,26 @@ class EquipoController extends Controller
     public function index()
     {
         $equipos = \App\Equipo::all();
-        return view('equipos',['equipos' => $equipos]);
+        return view('equipos', ['equipos' => $equipos]);
+    }
+
+    public function get()
+    {
+        return \App\Equipo::all();
+    }
+
+    public function post()
+    {
+        return \App\Equipo::all();
+    }
+
+    public function put()
+    {
+        return \App\Equipo::all();
+    }
+
+    public function delete()
+    {
+        return \App\Equipo::all();
     }
 }

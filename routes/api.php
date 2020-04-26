@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/equipo', 'EquipoController@get');
+Route::get('/event', 'EventController@get');
+Route::get('/project', 'ProjectController@get');
+Route::get('/video', 'VideoController@get');

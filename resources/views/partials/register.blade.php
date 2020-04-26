@@ -85,7 +85,7 @@
 @section('registerCheck')
     @parent
 
-    <script>
+    <script type="text/javascript">
         $(function () {
             $('#registerForm').submit(function (e) {
                 e.preventDefault();

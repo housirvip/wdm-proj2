@@ -120,8 +120,8 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Student\WebData\Project5\resources\js\mijares.js */"./resources/js/mijares.js");
-module.exports = __webpack_require__(/*! C:\Student\WebData\Project5\resources\sass\mijares.scss */"./resources/sass/mijares.scss");
+__webpack_require__(/*! /Users/housirvip/PhpstormProjects/wdm-proj2/resources/js/mijares.js */"./resources/js/mijares.js");
+module.exports = __webpack_require__(/*! /Users/housirvip/PhpstormProjects/wdm-proj2/resources/sass/mijares.scss */"./resources/sass/mijares.scss");
 
 
 /***/ })
