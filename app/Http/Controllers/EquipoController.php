@@ -28,18 +28,32 @@ class EquipoController extends Controller
         return \App\Equipo::all();
     }
 
-    public function post()
+    public function post(Request $request)
     {
-        return \App\Equipo::all();
+        $equipo = new \App\Equipo;
+        $equipo->name = $request->input('name');
+        $equipo->email = $request->input('email');
+        $equipo->phone = $request->input('phone');
+        $equipo->experience = $request->input('experience');
+        $equipo->avatar = $request->input('avatar');
+        $equipo->save();
+        return $equipo;
     }
 
-    public function put()
+    public function put(Request $request)
     {
-        return \App\Equipo::all();
+        $equipo = \App\Equipo::find($request->input('id'));
+        $equipo->name = $request->input('name');
+        $equipo->email = $request->input('email');
+        $equipo->phone = $request->input('phone');
+        $equipo->experience = $request->input('experience');
+        $equipo->avatar = $request->input('avatar');
+        $equipo->update();
+        return $equipo;
     }
 
-    public function delete()
+    public function delete(Request $request)
     {
-        return \App\Equipo::all();
+        return \App\Equipo::destroy($request->input('id'));
     }
 }

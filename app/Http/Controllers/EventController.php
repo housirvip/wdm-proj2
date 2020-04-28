@@ -27,4 +27,29 @@ class EventController extends Controller
     {
         return \App\Event::all();
     }
+
+    public function post(Request $request)
+    {
+        $event = new \App\Event;
+        $event->title = $request->input('title');
+        $event->content = $request->input('content');
+        $event->image_url = $request->input('image_url');
+        $event->save();
+        return $event;
+    }
+
+    public function put(Request $request)
+    {
+        $event = \App\Event::find($request->input('id'));
+        $event->title = $request->input('title');
+        $event->content = $request->input('content');
+        $event->image_url = $request->input('image_url');
+        $event->update();
+        return $event;
+    }
+
+    public function delete(Request $request)
+    {
+        return \App\Event::destroy($request->input('id'));
+    }
 }

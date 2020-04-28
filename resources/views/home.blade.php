@@ -6,33 +6,73 @@
     <div class="row home-content">
         <div class="col-3">
             <div class="list-group" id="list-tab" role="tablist">
-                <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list"
-                   href="#list-home" role="tab" aria-controls="home">Equipo</a>
-                <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list"
-                   href="#list-profile" role="tab" aria-controls="profile">Events</a>
-                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"
-                   href="#list-messages" role="tab" aria-controls="messages">Projects</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
-                   href="#list-settings" role="tab" aria-controls="settings">Videos</a>
+                <a class="list-group-item list-group-item-action active" id="list-equipo-list" data-toggle="list"
+                   href="#list-equipo" role="tab" aria-controls="home">Equipos</a>
+                <a class="list-group-item list-group-item-action" id="list-event-list" data-toggle="list"
+                   href="#list-event" role="tab" aria-controls="profile">Events</a>
+                <a class="list-group-item list-group-item-action" id="list-project-list" data-toggle="list"
+                   href="#list-project" role="tab" aria-controls="messages">Projects</a>
+                <a class="list-group-item list-group-item-action" id="list-video-list" data-toggle="list"
+                   href="#list-video" role="tab" aria-controls="settings">Videos</a>
             </div>
         </div>
         <div class="col-9">
             <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                <div class="tab-pane fade show active" id="list-equipo" role="tabpanel"
+                     aria-labelledby="list-equipo-list">
                     <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</button>
                     <table id="table-equipo"></table>
                 </div>
-                <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                <div class="tab-pane fade" id="list-event" role="tabpanel" aria-labelledby="list-event-list">
                     <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</button>
                     <table id="table-event"></table>
                 </div>
-                <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                <div class="tab-pane fade" id="list-project" role="tabpanel" aria-labelledby="list-project-list">
                     <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</button>
                     <table id="table-project"></table>
                 </div>
-                <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                <div class="tab-pane fade" id="list-video" role="tabpanel" aria-labelledby="list-video-list">
                     <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</button>
                     <table id="table-video"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal-delete">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Delete Warning</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Do you want to delete this item?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" onclick="doDelete()">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal-edit">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Item</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modal-edit-body">
+                    <form id="form-edit">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="doSubmit()">Submit</button>
                 </div>
             </div>
         </div>
@@ -43,73 +83,112 @@
     @parent
 
     <script type="text/javascript">
+        let currentItem = null;
+        let currentType = 'equipo';
 
-        // $(document).ready(function(){
-        //     $('[data-toggle="tooltip"]').tooltip();
-        //     const actions = $("table td:last-child").html();
-        //     // Append table with add row form on add new button click
-        //     $(".add-new").click(function(){
-        //         $(this).attr("disabled", "disabled");
-        //         const index = $("table tbody tr:last-child").index();
-        //         const row = '<tr>' +
-        //             '<td><input type="text" class="form-control" name="name" id="name"></td>' +
-        //             '<td><input type="text" class="form-control" name="department" id="department"></td>' +
-        //             '<td><input type="text" class="form-control" name="phone" id="phone"></td>' +
-        //             '<td>' + actions + '</td>' +
-        //             '</tr>';
-        //         $("table").append(row);
-        //         $("table tbody tr").eq(index + 1).find(".add, .edit").toggle();
-        //         $('[data-toggle="tooltip"]').tooltip();
-        //     });
-        //     // Add row on add button click
-        //     $(document).on("click", ".add", function(){
-        //         let empty = false;
-        //         const input = $(this).parents("tr").find('input[type="text"]');
-        //         input.each(function(){
-        //             if(!$(this).val()){
-        //                 $(this).addClass("error");
-        //                 empty = true;
-        //             } else{
-        //                 $(this).removeClass("error");
-        //             }
-        //         });
-        //         $(this).parents("tr").find(".error").first().focus();
-        //         if(!empty){
-        //             input.each(function(){
-        //                 $(this).parent("td").html($(this).val());
-        //             });
-        //             $(this).parents("tr").find(".add, .edit").toggle();
-        //             $(".add-new").removeAttr("disabled");
-        //         }
-        //     });
-        //     // Edit row on edit button click
-        //     $(document).on("click", ".edit", function(){
-        //         $(this).parents("tr").find("td:not(:last-child)").each(function(){
-        //             $(this).html('<input type="text" class="form-control" value="' + $(this).text() + '">');
-        //         });
-        //         $(this).parents("tr").find(".add, .edit").toggle();
-        //         $(".add-new").attr("disabled", "disabled");
-        //     });
-        //     // Delete row on delete button click
-        //     $(document).on("click", ".delete", function(){
-        //         $(this).parents("tr").remove();
-        //         $(".add-new").removeAttr("disabled");
-        //     });
-        // });
-        //
-        window.operateEvents = {
-            'click .edit': function (e, value, row, index) {
-                alert('You click like action, row: ' + JSON.stringify(row))
-            },
-            'click .delete': function (e, value, row, index) {
-                $('#table-equipo').bootstrapTable('remove', {
-                    field: 'id',
-                    values: [row.id]
-                })
-            }
+        $('#list-tab a').on('click', function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+            currentType = e.target.id.split('-')[1];
+        })
+
+        $('button.add-new').on('click', function (e) {
+            e.preventDefault();
+            createForm();
+            $('#modal-edit').modal('show');
+        })
+
+        function getFormData($form) {
+            let unIndexedArray = $form.serializeArray();
+            let indexedArray = {};
+
+            $.map(unIndexedArray, function (n, i) {
+                indexedArray[n['name']] = n['value'];
+            });
+
+            return indexedArray;
         }
 
-        function operateFormatter(value, row, index) {
+        function doSubmit() {
+            const data = getFormData($('#form-edit'));
+            console.log(data);
+            $.ajax({
+                url: '/api/' + currentType,
+                type: data.id ? "PUT" : "POST",
+                dataType: "json",
+                data: data,
+                // async: false,
+                success: function (data) {
+                    $('#table-' + currentType).bootstrapTable('refresh');
+                    $('#modal-edit').modal('hide');
+                }
+            });
+        }
+
+        function doDelete() {
+            $.ajax({
+                url: '/api/' + currentType + '?id=' + currentItem.id,
+                type: "DELETE",
+                dataType: "json",
+                // async: false,
+                success: function (data) {
+                    $('#table-' + currentType).bootstrapTable('remove', {
+                        field: 'id',
+                        values: [currentItem.id]
+                    })
+                    $('#modal-delete').modal('hide');
+                }
+            });
+        }
+
+        function createForm() {
+            let html = '';
+            $('#table-' + currentType).bootstrapTable('getVisibleColumns').map(function (column) {
+                if (column.field === 'id' || column.field === 'operate') {
+                    return;
+                }
+                html += '<div class="form-group">\n' +
+                    '<label for="for-' + column.field + '">' + column.field + '</label>\n' +
+                    '<input class="form-control" name="' + column.field + '" id="for-' + column.field + '">\n' +
+                    '</div>'
+            });
+            $('#form-edit').html(html);
+        }
+
+        function editForm(row) {
+            let html = '';
+            $.each(row, function (key, value) {
+                if (key === 'updated_at' || key === 'created_at') {
+                    return;
+                }
+                if (key === 'id') {
+                    html += '<div class="form-group" style="display: none">\n' +
+                        '<label for="for-' + key + '">' + key + '</label>\n' +
+                        '<input class="form-control" name="' + key + '" id="for-' + key + '" value="' + value + '">\n' +
+                        '</div>'
+                    return;
+                }
+                html += '<div class="form-group">\n' +
+                    '<label for="for-' + key + '">' + key + '</label>\n' +
+                    '<input class="form-control" name="' + key + '" id="for-' + key + '" value="' + value + '">\n' +
+                    '</div>'
+            });
+            $('#form-edit').html(html);
+        }
+
+        window.operateEvents = {
+            'click .edit': function (e, value, row, index) {
+                currentItem = row;
+                editForm(row);
+                $('#modal-edit').modal('show');
+            },
+            'click .delete': function (e, value, row, index) {
+                currentItem = row;
+                $('#modal-delete').modal('show');
+            },
+        }
+
+        function operate(value, row, index) {
             return [
                 '<a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>\n' +
                 '<a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>'
@@ -120,6 +199,7 @@
             url: '/api/equipo',
             pagination: true,
             search: true,
+            uniqueId: 'id',
             columns: [{
                 field: 'id',
                 title: 'ID'
@@ -144,13 +224,14 @@
                 align: 'center',
                 clickToSelect: false,
                 events: window.operateEvents,
-                formatter: operateFormatter
+                formatter: operate
             }]
         })
         $('#table-event').bootstrapTable({
             url: '/api/event',
             pagination: true,
             search: true,
+            uniqueId: 'id',
             columns: [{
                 field: 'id',
                 title: 'ID'
@@ -163,25 +244,27 @@
             }, {
                 field: 'image_url',
                 title: 'ImgUrl'
-            }],
-            onClickRow: function (row, $element, field) {
-                console.log('hello');
-                console.log(row);
-                console.log($element);
-                console.log(field);
-            }
+            }, {
+                field: 'operate',
+                title: 'Item Operate',
+                align: 'center',
+                clickToSelect: false,
+                events: window.operateEvents,
+                formatter: operate
+            }]
         })
         $('#table-project').bootstrapTable({
             url: '/api/project',
             pagination: true,
             search: true,
+            uniqueId: 'id',
             columns: [{
                 field: 'id',
                 title: 'ID'
             }, {
                 field: 'title',
                 title: 'Title'
-            },{
+            }, {
                 field: 'subtitle',
                 title: 'SubTitle'
             }, {
@@ -193,18 +276,20 @@
             }, {
                 field: 'image_url2',
                 title: 'ImgUrl2'
-            }],
-            onClickRow: function (row, $element, field) {
-                console.log('hello');
-                console.log(row);
-                console.log($element);
-                console.log(field);
-            }
+            }, {
+                field: 'operate',
+                title: 'Item Operate',
+                align: 'center',
+                clickToSelect: false,
+                events: window.operateEvents,
+                formatter: operate
+            }]
         })
         $('#table-video').bootstrapTable({
             url: '/api/video',
             pagination: true,
             search: true,
+            uniqueId: 'id',
             columns: [{
                 field: 'id',
                 title: 'ID'
@@ -217,13 +302,14 @@
             }, {
                 field: 'url',
                 title: 'Url'
-            }],
-            onClickRow: function (row, $element, field) {
-                console.log('hello');
-                console.log(row);
-                console.log($element);
-                console.log(field);
-            }
+            }, {
+                field: 'operate',
+                title: 'Item Operate',
+                align: 'center',
+                clickToSelect: false,
+                events: window.operateEvents,
+                formatter: operate
+            }]
         })
     </script>
 @endsection
