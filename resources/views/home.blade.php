@@ -61,7 +61,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Edit Item</h5>
+                    <h5 class="modal-title" id="modal-edit-title">Edit Item</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -95,6 +95,7 @@
         $('button.add-new').on('click', function (e) {
             e.preventDefault();
             createForm();
+            $('#modal-edit-title').text('Add Item');
             $('#modal-edit').modal('show');
         })
 
@@ -220,7 +221,7 @@
                 title: 'Avatar'
             }, {
                 field: 'operate',
-                title: 'Item Operate',
+                title: 'Operation',
                 align: 'center',
                 clickToSelect: false,
                 events: window.operateEvents,
