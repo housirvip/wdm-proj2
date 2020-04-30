@@ -42,7 +42,7 @@
                     <a class="nav-link" href="{{ route('video') }}">Videos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Blog</a>
+                    <a class="nav-link" href="http://xxh8517.uta.cloud/blog/">Blog</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('equipo') }}">Equipo</a>
