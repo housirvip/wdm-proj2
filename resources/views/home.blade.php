@@ -181,6 +181,7 @@
             'click .edit': function (e, value, row, index) {
                 currentItem = row;
                 editForm(row);
+                $('#modal-edit-title').text('Edit Item');
                 $('#modal-edit').modal('show');
             },
             'click .delete': function (e, value, row, index) {
